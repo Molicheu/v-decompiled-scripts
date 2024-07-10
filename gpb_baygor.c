@@ -588,7 +588,7 @@ void __EntryFunction__()//Position - 0x0
 				}
 			}
 		}
-		if (((((PED::IS_PED_INJURED(iLocal_238) || MISC::IS_BULLET_IN_AREA(Var76, 50f, true)) || MISC::IS_BULLET_IN_AREA(Var76, 50f, false)) || MISC::IS_PROJECTILE_IN_AREA(Var76, 20f, 20f, 20f, false)) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, Var76, 50f)) || GRAPHICS::GET_IS_PETROL_DECAL_IN_RANGE(Var76, 1f))
+		if (((((PED::IS_PED_INJURED(iLocal_238) || MISC::IS_BULLET_IN_AREA(Var76, 50f, true)) || MISC::IS_BULLET_IN_AREA(Var76, 50f, false)) || MISC::IS_PROJECTILE_IN_AREA(Var76, 20f, 20f, 20f, false)) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Var76, 50f)) || GRAPHICS::GET_IS_PETROL_DECAL_IN_RANGE(Var76, 1f))
 		{
 			if (!func_92())
 			{

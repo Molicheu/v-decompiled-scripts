@@ -3315,7 +3315,7 @@ int func_87(int iParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4)
 					return 1;
 				}
 			}
-			if ((FIRE::IS_EXPLOSION_IN_SPHERE(-1, Var1, 25f) && !FIRE::IS_EXPLOSION_IN_SPHERE(11, Var1, 25f)) && !FIRE::IS_EXPLOSION_IN_SPHERE(13, Var1, 25f))
+			if ((FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Var1, 25f) && !FIRE::IS_EXPLOSION_IN_SPHERE(11 /*EXP_TAG_DIR_STEAM*/, Var1, 25f)) && !FIRE::IS_EXPLOSION_IN_SPHERE(13 /*EXP_TAG_DIR_WATER_HYDRANT*/, Var1, 25f))
 			{
 				return 1;
 			}

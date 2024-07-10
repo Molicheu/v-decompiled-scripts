@@ -109661,7 +109661,7 @@ void func_786(int iParam0)//Position - 0x8341A
 		if (!bLocal_1795)
 		{
 			Var0 = { ENTITY::GET_ENTITY_COORDS(iParam0, true) };
-			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, Var0, 20f))
+			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Var0, 20f))
 			{
 				HUD::CLEAR_PRINTS();
 				bLocal_1806 = true;

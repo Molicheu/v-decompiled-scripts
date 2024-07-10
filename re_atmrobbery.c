@@ -5676,7 +5676,7 @@ bool func_130()//Position - 0x7341
 		{
 			bVar0 = true;
 		}
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, PED::GET_PED_BONE_COORDS(iLocal_98, 31086, 0f, 0f, 0f), 50f))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, PED::GET_PED_BONE_COORDS(iLocal_98, 31086, 0f, 0f, 0f), 50f))
 		{
 			bVar0 = true;
 		}
@@ -7720,7 +7720,7 @@ int func_196()//Position - 0x9754
 	{
 		return 1;
 	}
-	if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, Local_93, 50f))
+	if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Local_93, 50f))
 	{
 		return 1;
 	}

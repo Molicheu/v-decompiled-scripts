@@ -934,7 +934,7 @@ void func_8(struct<3> Param0, struct<3> Param3, var uParam6)//Position - 0x9E9
 				Global_96536 = 3;
 			}
 		}
-		else if ((FIRE::IS_EXPLOSION_IN_AREA(0, Param0, Param3) || FIRE::IS_EXPLOSION_IN_AREA(2, Param0, Param3)) || MISC::IS_PROJECTILE_TYPE_IN_AREA(Param0, Param3, joaat("WEAPON_GRENADELAUNCHER"), true))
+		else if ((FIRE::IS_EXPLOSION_IN_AREA(0 /*EXP_TAG_GRENADE*/, Param0, Param3) || FIRE::IS_EXPLOSION_IN_AREA(2 /*EXP_TAG_STICKYBOMB*/, Param0, Param3)) || MISC::IS_PROJECTILE_TYPE_IN_AREA(Param0, Param3, joaat("WEAPON_GRENADELAUNCHER"), true))
 		{
 			Global_96536 = 5;
 		}
@@ -949,7 +949,7 @@ void func_9(struct<3> Param0, struct<3> Param3)//Position - 0xA64
 	{
 		if (iVar0 == joaat("WEAPON_MOLOTOV") || iVar0 == joaat("WEAPON_PETROLCAN"))
 		{
-			if (FIRE::IS_EXPLOSION_IN_AREA(3, Param0, Param3))
+			if (FIRE::IS_EXPLOSION_IN_AREA(3 /*EXP_TAG_MOLOTOV*/, Param0, Param3))
 			{
 				Global_96536 = 2;
 			}

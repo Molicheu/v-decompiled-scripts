@@ -119648,7 +119648,7 @@ void func_872()//Position - 0x8E97B
 
 void func_873(int iParam0)//Position - 0x8EDA6
 {
-	FIRE::ADD_EXPLOSION(Local_223[iParam0 /*14*/].f_3, 4, 1f, true, false, 1f, false);
+	FIRE::ADD_EXPLOSION(Local_223[iParam0 /*14*/].f_3, 4 /*EXP_TAG_ROCKET*/, 1f, true, false, 1f, false);
 	AUDIO::PLAY_SOUND_FROM_COORD(-1, "Jet_Explosions", Local_223[iParam0 /*14*/].f_3, "exile_1", false, 0, false);
 	GRAPHICS::STOP_PARTICLE_FX_LOOPED(Local_223[iParam0 /*14*/].f_2, false);
 	OBJECT::DELETE_OBJECT(&(Local_223[iParam0 /*14*/].f_1));

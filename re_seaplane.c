@@ -4523,7 +4523,7 @@ void func_101(int iParam0)//Position - 0x567A
 
 bool func_102()//Position - 0x5718
 {
-	return FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, 3150.5076f, 2179.3433f, -30f, 3064.6077f, 2223.616f, 12.381769f, 103f);
+	return FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, 3150.5076f, 2179.3433f, -30f, 3064.6077f, 2223.616f, 12.381769f, 103f);
 }
 
 int func_103()//Position - 0x5748

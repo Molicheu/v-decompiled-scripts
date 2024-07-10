@@ -42860,7 +42860,7 @@ void func_389()//Position - 0x31772
 		}
 		else if (!func_481(Local_645.f_2))
 		{
-			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(Local_645.f_2, true), 4f) || iLocal_858)
+			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(Local_645.f_2, true), 4f) || iLocal_858)
 			{
 				RECORDING::REPLAY_RECORD_BACK_FOR_TIME(3f, 2f, 4);
 				func_19();
@@ -42874,7 +42874,7 @@ void func_389()//Position - 0x31772
 				func_11(&(Local_645.f_3));
 			}
 		}
-		else if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(Local_645.f_2, true), 4f))
+		else if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(Local_645.f_2, true), 4f))
 		{
 			if (MISC::GET_GAME_TIMER() > iLocal_873)
 			{

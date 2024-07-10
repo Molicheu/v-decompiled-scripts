@@ -79193,7 +79193,7 @@ void func_485(struct<8> Param0)//Position - 0x5DE82
 		return;
 	}
 	iLocal_654 = 0;
-	if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(iVar0, true), 8f) || func_490(iVar0))
+	if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(iVar0, true), 8f) || func_490(iVar0))
 	{
 		AUDIO::STOP_CURRENT_PLAYING_SPEECH(iVar0);
 		iVar1 = MISC::GET_RANDOM_INT_IN_RANGE(1, 5);

@@ -91994,14 +91994,14 @@ void func_415()//Position - 0x6A6FC
 			{
 				ENTITY::SET_ENTITY_VISIBLE(iLocal_3551, false, false);
 				OBJECT::DELETE_OBJECT(&iLocal_3551);
-				FIRE::ADD_EXPLOSION(-813.3746f, 179.4353f, 71.39f, 0, 1f, true, false, 1f, false);
+				FIRE::ADD_EXPLOSION(-813.3746f, 179.4353f, 71.39f, 0 /*EXP_TAG_GRENADE*/, 1f, true, false, 1f, false);
 				iLocal_3003++;
 			}
 			break;
 		
 		case 6:
 			func_432();
-			if (FIRE::IS_EXPLOSION_IN_SPHERE(0, -813.3746f, 179.4353f, 71.39f, 5f))
+			if (FIRE::IS_EXPLOSION_IN_SPHERE(0 /*EXP_TAG_GRENADE*/, -813.3746f, 179.4353f, 71.39f, 5f))
 			{
 				iLocal_3535 = MISC::GET_GAME_TIMER();
 				AUDIO::START_AUDIO_SCENE("MI_4_ENEMIES_BREACH_DOOR");
@@ -99398,7 +99398,7 @@ void func_524()//Position - 0x76BFC
 		}
 		PED::SET_PED_RESET_FLAG(iLocal_3043, 249, true);
 	}
-	if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, -802.7031f, 176.35884f, 75.74074f, -799.6001f, 168.64885f, 79.70335f, 4.5f))
+	if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, -802.7031f, 176.35884f, 75.74074f, -799.6001f, 168.64885f, 79.70335f, 4.5f))
 	{
 		if (iLocal_3003 < 5)
 		{

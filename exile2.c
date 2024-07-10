@@ -118125,7 +118125,7 @@ void func_728()//Position - 0x8B15E
 	func_34(&iLocal_2023, 2, 0);
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_2341))
 	{
-		FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_2341, true), 4, 1f, true, false, 1f, false);
+		FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_2341, true), 4 /*EXP_TAG_ROCKET*/, 1f, true, false, 1f, false);
 		ENTITY::DELETE_ENTITY(&iLocal_2341);
 		if (!AUDIO::HAS_SOUND_FINISHED(iLocal_730))
 		{
@@ -125274,7 +125274,7 @@ int func_903()//Position - 0x94106
 			}
 			else
 			{
-				FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_2341, true), 4, 1f, true, false, 1f, false);
+				FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_2341, true), 4 /*EXP_TAG_ROCKET*/, 1f, true, false, 1f, false);
 				if (GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(iLocal_842))
 				{
 					GRAPHICS::STOP_PARTICLE_FX_LOOPED(iLocal_842, false);
@@ -126176,7 +126176,7 @@ int func_924()//Position - 0x9577C
 			}
 			else
 			{
-				FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_2341, true), 4, 1f, true, false, 1f, false);
+				FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_2341, true), 4 /*EXP_TAG_ROCKET*/, 1f, true, false, 1f, false);
 				if (GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(iLocal_842))
 				{
 					GRAPHICS::STOP_PARTICLE_FX_LOOPED(iLocal_842, false);
@@ -128966,7 +128966,7 @@ void func_966()//Position - 0x9A43A
 			case 26:
 				break;
 		}
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(Local_1718.f_0, true), 10f))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(Local_1718.f_0, true), 10f))
 		{
 			if (!func_568())
 			{
@@ -142534,7 +142534,7 @@ void func_1147()//Position - 0xB23A5
 	STREAMING::REMOVE_ANIM_DICT(sLocal_7348);
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_2341))
 	{
-		FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_2341, true), 4, 1f, true, false, 1f, false);
+		FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_2341, true), 4 /*EXP_TAG_ROCKET*/, 1f, true, false, 1f, false);
 		ENTITY::DELETE_ENTITY(&iLocal_2341);
 		if (!AUDIO::HAS_SOUND_FINISHED(iLocal_730))
 		{

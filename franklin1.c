@@ -128466,7 +128466,7 @@ void func_938(int iParam0, var uParam1)//Position - 0xA1E71
 			}
 			if (iLocal_1065[1] == 1)
 			{
-				if (((func_940(PLAYER::PLAYER_PED_ID(), 1, 89.17f, -1952.71f, 19.74f, 10f) || func_940(PLAYER::PLAYER_PED_ID(), 0, 89.17f, -1952.71f, 19.74f, 10f)) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, 89.17f, -1952.71f, 19.74f, 10f)) || func_939(PLAYER::PLAYER_PED_ID(), joaat("AMBIENT_GANG_BALLAS"), 104.54f, -1939.98f, 19.8f, 50f))
+				if (((func_940(PLAYER::PLAYER_PED_ID(), 1, 89.17f, -1952.71f, 19.74f, 10f) || func_940(PLAYER::PLAYER_PED_ID(), 0, 89.17f, -1952.71f, 19.74f, 10f)) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, 89.17f, -1952.71f, 19.74f, 10f)) || func_939(PLAYER::PLAYER_PED_ID(), joaat("AMBIENT_GANG_BALLAS"), 104.54f, -1939.98f, 19.8f, 50f))
 				{
 					*uParam1 = 1;
 					*iParam0 = 12;

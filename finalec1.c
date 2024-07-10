@@ -120478,7 +120478,7 @@ int func_950()//Position - 0x91605
 			{
 				return 1;
 			}
-			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(Local_194[iVar3 /*14*/], true), 50f))
+			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(Local_194[iVar3 /*14*/], true), 50f))
 			{
 				return 1;
 			}

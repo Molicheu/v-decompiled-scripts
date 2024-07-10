@@ -8944,7 +8944,7 @@ int func_173(var uParam0, int* iParam1)//Position - 0x8E90
 			}
 			func_371(iParam1);
 			func_370();
-			if ((((PLAYER::IS_PLAYER_WANTED_LEVEL_GREATER(PLAYER::PLAYER_ID(), 0) && func_369(iParam1->f_1, 1) < fLocal_1758) || !func_368(iParam1->f_1)) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, uParam0->f_9, 25f)) || ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iParam1->f_1, PLAYER::PLAYER_PED_ID(), true))
+			if ((((PLAYER::IS_PLAYER_WANTED_LEVEL_GREATER(PLAYER::PLAYER_ID(), 0) && func_369(iParam1->f_1, 1) < fLocal_1758) || !func_368(iParam1->f_1)) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, uParam0->f_9, 25f)) || ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iParam1->f_1, PLAYER::PLAYER_PED_ID(), true))
 			{
 				func_358(Local_1464, uParam0, 2);
 			}

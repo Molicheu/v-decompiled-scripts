@@ -6554,7 +6554,7 @@ bool func_170(int iParam0)//Position - 0x7142
 			{
 				bVar0 = true;
 			}
-			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, PED::GET_PED_BONE_COORDS(iLocal_73, 31086, 0f, 0f, 0f), 6f))
+			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, PED::GET_PED_BONE_COORDS(iLocal_73, 31086, 0f, 0f, 0f), 6f))
 			{
 				bVar0 = true;
 			}

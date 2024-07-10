@@ -10195,7 +10195,7 @@ int func_217(var uParam0, var uParam1, var uParam2, bool bParam3, var uParam4)//
 	}
 	if (iVar4 == 9)
 	{
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, -594.81824f, -1792.0353f, 21.93077f, 35f))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, -594.81824f, -1792.0353f, 21.93077f, 35f))
 		{
 			iVar0 = 1;
 		}

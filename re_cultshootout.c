@@ -3255,7 +3255,7 @@ int func_95()//Position - 0x3522
 		}
 		iVar0++;
 	}
-	if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, Local_71, Local_74, fLocal_77))
+	if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, Local_71, Local_74, fLocal_77))
 	{
 		return 1;
 	}

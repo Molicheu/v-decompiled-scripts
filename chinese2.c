@@ -9292,7 +9292,7 @@ void func_121(var uParam0, struct<2> Param1, var uParam3, struct<2> Param4, var 
 			}
 		}
 	}
-	if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, Local_69, fLocal_72))
+	if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Local_69, fLocal_72))
 	{
 		bLocal_52 = true;
 	}
@@ -12607,7 +12607,7 @@ void func_166(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 							{
 								if (INTERIOR::IS_VALID_INTERIOR(INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID())))
 								{
-									FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) + Vector(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 4f), MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 4f)), 16, 1.5f, true, false, 1f, false);
+									FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) + Vector(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 4f), MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 4f)), 16 /*EXP_TAG_SHIP_DESTROY*/, 1.5f, true, false, 1f, false);
 									Local_2915[iParam0 /*10*/].f_9 = (Local_2915[iParam0 /*10*/].f_9 - 1f);
 									Local_2915[iParam0 /*10*/].f_7 = (MISC::GET_GAME_TIMER() + MISC::GET_RANDOM_INT_IN_RANGE(250, 520));
 								}
@@ -12627,7 +12627,7 @@ void func_166(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 							{
 								if (!BitTest(Local_2915[iParam0 /*10*/].f_7, bVar5))
 								{
-									if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, Local_2887[bVar5 /*3*/], 5f))
+									if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Local_2887[bVar5 /*3*/], 5f))
 									{
 										MISC::SET_BIT(&(Local_2915[iParam0 /*10*/].f_7), bVar5);
 										if (Local_2915[iParam0 /*10*/].f_6 == 0)
@@ -12646,7 +12646,7 @@ void func_166(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 								{
 									if (!BitTest(Local_2915[iParam0 /*10*/].f_7, bVar5 + 9) && BitTest(Local_2915[iParam0 /*10*/].f_7, bVar5))
 									{
-										FIRE::ADD_EXPLOSION(Local_2887[bVar5 /*3*/], 16, 1.5f, true, false, 1f, false);
+										FIRE::ADD_EXPLOSION(Local_2887[bVar5 /*3*/], 16 /*EXP_TAG_SHIP_DESTROY*/, 1.5f, true, false, 1f, false);
 										MISC::SET_BIT(&(Local_2915[iParam0 /*10*/].f_7), bVar5 + 9);
 										bVar5 = 8;
 										Local_2915[iParam0 /*10*/].f_8 = (MISC::GET_GAME_TIMER() + MISC::GET_RANDOM_INT_IN_RANGE(150, 320));
@@ -14365,7 +14365,7 @@ void func_176(int iParam0, int iParam1)//Position - 0x16865
 						{
 							if (!OBJECT::DOES_PICKUP_OBJECT_EXIST(iLocal_2673))
 							{
-								if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, 2435.2524f, 4966.748f, 41.3476f, 4f))
+								if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, 2435.2524f, 4966.748f, 41.3476f, 4f))
 								{
 									Local_3118[iVar3 /*8*/].f_2 = 1;
 								}
@@ -14497,9 +14497,9 @@ void func_176(int iParam0, int iParam1)//Position - 0x16865
 				break;
 			
 			case 44:
-				if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, 2435.776f, 4963.067f, 39.34265f, 2428.1184f, 4971.287f, 43.673267f, 11.875f))
+				if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, 2435.776f, 4963.067f, 39.34265f, 2428.1184f, 4971.287f, 43.673267f, 11.875f))
 				{
-					if (!FIRE::IS_EXPLOSION_IN_ANGLED_AREA(24, 2435.776f, 4963.067f, 39.34265f, 2428.1184f, 4971.287f, 43.673267f, 11.875f) && !FIRE::IS_EXPLOSION_IN_ANGLED_AREA(22, 2435.776f, 4963.067f, 39.34265f, 2428.1184f, 4971.287f, 43.673267f, 11.875f))
+					if (!FIRE::IS_EXPLOSION_IN_ANGLED_AREA(24 /*EXP_TAG_EXTINGUISHER*/, 2435.776f, 4963.067f, 39.34265f, 2428.1184f, 4971.287f, 43.673267f, 11.875f) && !FIRE::IS_EXPLOSION_IN_ANGLED_AREA(22 /*EXP_TAG_FLARE*/, 2435.776f, 4963.067f, 39.34265f, 2428.1184f, 4971.287f, 43.673267f, 11.875f))
 					{
 						Local_3118[iVar3 /*8*/].f_2 = 1;
 					}
@@ -15066,7 +15066,7 @@ void func_181()//Position - 0x1789F
 							break;
 						
 						case 1:
-							FIRE::ADD_EXPLOSION(2432.534f, 4968.383f, 42.2389f, 4, 0.5f, true, false, 1f, false);
+							FIRE::ADD_EXPLOSION(2432.534f, 4968.383f, 42.2389f, 4 /*EXP_TAG_ROCKET*/, 0.5f, true, false, 1f, false);
 							Local_2341[iVar3 /*6*/] = 1;
 							break;
 						

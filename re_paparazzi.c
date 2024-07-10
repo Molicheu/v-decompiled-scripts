@@ -9117,7 +9117,7 @@ int func_203()//Position - 0xBBBE
 		{
 			if (ENTITY::IS_ENTITY_VISIBLE(Local_202[iVar1 /*18*/]))
 			{
-				if (((MISC::IS_BULLET_IN_AREA(Local_202[iVar1 /*18*/].f_6, 5f, true) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, Local_202[iVar1 /*18*/].f_6, 10f)) || PED::IS_PED_FLEEING(Local_202[iVar1 /*18*/])) || (iLocal_384[iVar1] > 10 && iLocal_45 == 0))
+				if (((MISC::IS_BULLET_IN_AREA(Local_202[iVar1 /*18*/].f_6, 5f, true) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Local_202[iVar1 /*18*/].f_6, 10f)) || PED::IS_PED_FLEEING(Local_202[iVar1 /*18*/])) || (iLocal_384[iVar1] > 10 && iLocal_45 == 0))
 				{
 					iVar0 = 1;
 				}

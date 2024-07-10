@@ -9141,7 +9141,7 @@ void func_151(var uParam0, struct<2> Param1, var uParam3, struct<2> Param4, var 
 			}
 		}
 	}
-	if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, Local_65, fLocal_68))
+	if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Local_65, fLocal_68))
 	{
 		bLocal_48 = true;
 	}
@@ -11637,7 +11637,7 @@ int func_160(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 					{
 						if (Local_1650[iLocal_1980 /*17*/] == 2)
 						{
-							if ((((FIRE::IS_EXPLOSION_IN_ANGLED_AREA(4, Local_1650[iLocal_1980 /*17*/].f_7[0 /*3*/], Local_1650[iLocal_1980 /*17*/].f_7[1 /*3*/], Local_1650[iLocal_1980 /*17*/].f_14) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(2, Local_1650[iLocal_1980 /*17*/].f_7[0 /*3*/], Local_1650[iLocal_1980 /*17*/].f_7[1 /*3*/], Local_1650[iLocal_1980 /*17*/].f_14)) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(16, Local_1650[iLocal_1980 /*17*/].f_7[0 /*3*/], Local_1650[iLocal_1980 /*17*/].f_7[1 /*3*/], Local_1650[iLocal_1980 /*17*/].f_14)) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(1, Local_1650[iLocal_1980 /*17*/].f_7[0 /*3*/], Local_1650[iLocal_1980 /*17*/].f_7[1 /*3*/], Local_1650[iLocal_1980 /*17*/].f_14)) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(0, Local_1650[iLocal_1980 /*17*/].f_7[0 /*3*/], Local_1650[iLocal_1980 /*17*/].f_7[1 /*3*/], Local_1650[iLocal_1980 /*17*/].f_14))
+							if ((((FIRE::IS_EXPLOSION_IN_ANGLED_AREA(4 /*EXP_TAG_ROCKET*/, Local_1650[iLocal_1980 /*17*/].f_7[0 /*3*/], Local_1650[iLocal_1980 /*17*/].f_7[1 /*3*/], Local_1650[iLocal_1980 /*17*/].f_14) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(2 /*EXP_TAG_STICKYBOMB*/, Local_1650[iLocal_1980 /*17*/].f_7[0 /*3*/], Local_1650[iLocal_1980 /*17*/].f_7[1 /*3*/], Local_1650[iLocal_1980 /*17*/].f_14)) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(16 /*EXP_TAG_SHIP_DESTROY*/, Local_1650[iLocal_1980 /*17*/].f_7[0 /*3*/], Local_1650[iLocal_1980 /*17*/].f_7[1 /*3*/], Local_1650[iLocal_1980 /*17*/].f_14)) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(1 /*EXP_TAG_GRENADELAUNCHER*/, Local_1650[iLocal_1980 /*17*/].f_7[0 /*3*/], Local_1650[iLocal_1980 /*17*/].f_7[1 /*3*/], Local_1650[iLocal_1980 /*17*/].f_14)) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(0 /*EXP_TAG_GRENADE*/, Local_1650[iLocal_1980 /*17*/].f_7[0 /*3*/], Local_1650[iLocal_1980 /*17*/].f_7[1 /*3*/], Local_1650[iLocal_1980 /*17*/].f_14))
 							{
 								Local_1650[iLocal_1980 /*17*/] = 3;
 								bLocal_1649 = true;
@@ -11991,7 +11991,7 @@ int func_160(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 						case 1:
 							if (MISC::GET_GAME_TIMER() > Local_401[iParam0 /*10*/].f_7)
 							{
-								FIRE::ADD_EXPLOSION(Local_1650[3 /*17*/].f_7[0 /*3*/] + Local_1650[3 /*17*/].f_7[1 /*3*/] / Vector(2f, 2f, 2f), 16, 3f, false, true, 1f, false);
+								FIRE::ADD_EXPLOSION(Local_1650[3 /*17*/].f_7[0 /*3*/] + Local_1650[3 /*17*/].f_7[1 /*3*/] / Vector(2f, 2f, 2f), 16 /*EXP_TAG_SHIP_DESTROY*/, 3f, false, true, 1f, false);
 								Local_401[iParam0 /*10*/].f_7 = MISC::GET_GAME_TIMER() + 500;
 								AUDIO::START_AUDIO_SCENE("TREVOR_3_RAYFIRE");
 								Local_401[iParam0 /*10*/].f_6++;
@@ -12001,7 +12001,7 @@ int func_160(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 						case 2:
 							if (MISC::GET_GAME_TIMER() > Local_401[iParam0 /*10*/].f_7)
 							{
-								FIRE::ADD_EXPLOSION(Local_1650[0 /*17*/].f_7[0 /*3*/] + Local_1650[0 /*17*/].f_7[1 /*3*/] / Vector(2f, 2f, 2f), 16, 3f, false, true, 1f, false);
+								FIRE::ADD_EXPLOSION(Local_1650[0 /*17*/].f_7[0 /*3*/] + Local_1650[0 /*17*/].f_7[1 /*3*/] / Vector(2f, 2f, 2f), 16 /*EXP_TAG_SHIP_DESTROY*/, 3f, false, true, 1f, false);
 								Local_401[iParam0 /*10*/].f_7 = MISC::GET_GAME_TIMER() + 700;
 								Local_401[iParam0 /*10*/].f_6++;
 							}
@@ -12010,7 +12010,7 @@ int func_160(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 						case 3:
 							if (MISC::GET_GAME_TIMER() > Local_401[iParam0 /*10*/].f_7)
 							{
-								FIRE::ADD_EXPLOSION(Local_1650[2 /*17*/].f_7[0 /*3*/] + Local_1650[2 /*17*/].f_7[1 /*3*/] / Vector(2f, 2f, 2f), 16, 3f, false, true, 1f, false);
+								FIRE::ADD_EXPLOSION(Local_1650[2 /*17*/].f_7[0 /*3*/] + Local_1650[2 /*17*/].f_7[1 /*3*/] / Vector(2f, 2f, 2f), 16 /*EXP_TAG_SHIP_DESTROY*/, 3f, false, true, 1f, false);
 								Local_401[iParam0 /*10*/].f_7 = MISC::GET_GAME_TIMER() + 600;
 								Local_401[iParam0 /*10*/].f_6++;
 							}
@@ -12019,7 +12019,7 @@ int func_160(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 						case 4:
 							if (MISC::GET_GAME_TIMER() > Local_401[iParam0 /*10*/].f_7)
 							{
-								FIRE::ADD_EXPLOSION(Local_1650[4 /*17*/].f_7[0 /*3*/] + Local_1650[4 /*17*/].f_7[1 /*3*/] / Vector(2f, 2f, 2f), 16, 3f, false, true, 1f, false);
+								FIRE::ADD_EXPLOSION(Local_1650[4 /*17*/].f_7[0 /*3*/] + Local_1650[4 /*17*/].f_7[1 /*3*/] / Vector(2f, 2f, 2f), 16 /*EXP_TAG_SHIP_DESTROY*/, 3f, false, true, 1f, false);
 								Local_401[iParam0 /*10*/].f_7 = MISC::GET_GAME_TIMER() + 700;
 								Local_401[iParam0 /*10*/].f_6++;
 							}
@@ -12028,7 +12028,7 @@ int func_160(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 						case 5:
 							if (MISC::GET_GAME_TIMER() > Local_401[iParam0 /*10*/].f_7)
 							{
-								FIRE::ADD_EXPLOSION(Local_1650[1 /*17*/].f_7[0 /*3*/] + Local_1650[1 /*17*/].f_7[1 /*3*/] / Vector(2f, 2f, 2f), 16, 3f, false, true, 1f, false);
+								FIRE::ADD_EXPLOSION(Local_1650[1 /*17*/].f_7[0 /*3*/] + Local_1650[1 /*17*/].f_7[1 /*3*/] / Vector(2f, 2f, 2f), 16 /*EXP_TAG_SHIP_DESTROY*/, 3f, false, true, 1f, false);
 								Local_401[iParam0 /*10*/].f_6++;
 							}
 							break;
@@ -45524,7 +45524,7 @@ void func_315(int iParam0)//Position - 0x38667
 	}
 	Var4 = { func_316(Var1, 1.7f) };
 	Var4 = { Var4.f_0, Var4.f_1, Var1.f_2 };
-	FIRE::ADD_EXPLOSION_WITH_USER_VFX(Var4, 0, MISC::GET_HASH_KEY("EXP_VFXTAG_TREV3_TRAILER"), 0.5f, true, false, 1f);
+	FIRE::ADD_EXPLOSION_WITH_USER_VFX(Var4, 0 /*EXP_TAG_GRENADE*/, MISC::GET_HASH_KEY("EXP_VFXTAG_TREV3_TRAILER"), 0.5f, true, false, 1f);
 }
 
 Vector3 func_316(struct<3> Param0, float fParam3)//Position - 0x3875B

@@ -34495,7 +34495,7 @@ int func_264()//Position - 0x24A7F
 				}
 			}
 		}
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, PED::GET_PED_BONE_COORDS(iLocal_73, 31086, 0f, 0f, 0f), 8f))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, PED::GET_PED_BONE_COORDS(iLocal_73, 31086, 0f, 0f, 0f), 8f))
 		{
 			return 1;
 		}

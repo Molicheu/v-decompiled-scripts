@@ -124102,7 +124102,7 @@ void func_904()//Position - 0x931FC
 						if (ENTITY::HAS_ENTITY_COLLIDED_WITH_ANYTHING(iLocal_871))
 						{
 							func_237(20);
-							FIRE::ADD_EXPLOSION(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_871, 0f, -7f, 0f), 6, 3f, true, false, 1f, false);
+							FIRE::ADD_EXPLOSION(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_871, 0f, -7f, 0f), 6 /*EXP_TAG_HI_OCTANE*/, 3f, true, false, 1f, false);
 							iLocal_1056 = 1;
 						}
 					}
@@ -126181,7 +126181,7 @@ void func_927()//Position - 0x95EB4
 							}
 						}
 					}
-					if ((FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, -492.59f, 4433.52f, 29.8f, -491.36f, 4436.4f, 32.7f, 1.5f) && !FIRE::IS_EXPLOSION_IN_ANGLED_AREA(3, -492.59f, 4433.52f, 29.8f, -491.36f, 4436.4f, 32.7f, 1.5f)) && !FIRE::IS_EXPLOSION_IN_ANGLED_AREA(21, -492.59f, 4433.52f, 29.8f, -491.36f, 4436.4f, 32.7f, 1.5f))
+					if ((FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, -492.59f, 4433.52f, 29.8f, -491.36f, 4436.4f, 32.7f, 1.5f) && !FIRE::IS_EXPLOSION_IN_ANGLED_AREA(3 /*EXP_TAG_MOLOTOV*/, -492.59f, 4433.52f, 29.8f, -491.36f, 4436.4f, 32.7f, 1.5f)) && !FIRE::IS_EXPLOSION_IN_ANGLED_AREA(21 /*EXP_TAG_BZGAS*/, -492.59f, 4433.52f, 29.8f, -491.36f, 4436.4f, 32.7f, 1.5f))
 					{
 						func_937();
 						bLocal_1035 = true;
@@ -126721,7 +126721,7 @@ int func_934(var uParam0)//Position - 0x96C7B
 				{
 					if (SYSTEM::TIMERB() >= iLocal_5329)
 					{
-						FIRE::ADD_EXPLOSION(Local_5333, 4, fLocal_5336, true, false, 1f, false);
+						FIRE::ADD_EXPLOSION(Local_5333, 4 /*EXP_TAG_ROCKET*/, fLocal_5336, true, false, 1f, false);
 						bLocal_5330 = true;
 					}
 				}

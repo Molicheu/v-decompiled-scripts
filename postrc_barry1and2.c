@@ -345,7 +345,7 @@ int func_10(int iParam0)//Position - 0x4F0
 
 void func_11()//Position - 0x511
 {
-	if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, Local_50, 5f))
+	if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Local_50, 5f))
 	{
 		if (func_10(iLocal_41))
 		{

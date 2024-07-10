@@ -40097,9 +40097,9 @@ void func_300(var uParam0, var uParam1)//Position - 0x2F3DA
 			ENTITY::CLEAR_ENTITY_LAST_DAMAGE_ENTITY(*uParam0);
 			if (PED::IS_PED_RAGDOLL(*uParam0))
 			{
-				if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(*uParam0, true), 5f))
+				if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(*uParam0, true), 5f))
 				{
-					if (!FIRE::IS_EXPLOSION_IN_SPHERE(23, ENTITY::GET_ENTITY_COORDS(*uParam0, true), 5f))
+					if (!FIRE::IS_EXPLOSION_IN_SPHERE(23 /*EXP_TAG_GAS_CANISTER*/, ENTITY::GET_ENTITY_COORDS(*uParam0, true), 5f))
 					{
 						PED::SET_RAGDOLL_BLOCKING_FLAGS(*uParam0, 0);
 						ENTITY::SET_ENTITY_HEALTH(*uParam0, 0, 0, 0);
@@ -43738,7 +43738,7 @@ void func_314(struct<3> Param0)//Position - 0x33D78
 							break;
 					}
 					bVar30 = false;
-					if (FIRE::IS_EXPLOSION_IN_AREA(-1, Var31 - Vector(5f, 5f, 5f), Var31 + Vector(5f, 5f, 5f)) && !FIRE::IS_EXPLOSION_IN_AREA(23, Var31 - Vector(5f, 5f, 5f), Var31 + Vector(5f, 5f, 5f)))
+					if (FIRE::IS_EXPLOSION_IN_AREA(-1 /*EXP_TAG_DONTCARE*/, Var31 - Vector(5f, 5f, 5f), Var31 + Vector(5f, 5f, 5f)) && !FIRE::IS_EXPLOSION_IN_AREA(23 /*EXP_TAG_GAS_CANISTER*/, Var31 - Vector(5f, 5f, 5f), Var31 + Vector(5f, 5f, 5f)))
 					{
 						if ((MISC::GET_GAME_TIMER() - iLocal_347) > 1000)
 						{
@@ -44028,7 +44028,7 @@ void func_314(struct<3> Param0)//Position - 0x33D78
 						}
 					}
 					bVar37 = false;
-					if (FIRE::IS_EXPLOSION_IN_AREA(-1, Var38 - Vector(5f, 5f, 5f), Var38 + Vector(5f, 5f, 5f)) && !FIRE::IS_EXPLOSION_IN_AREA(23, Var38 - Vector(5f, 5f, 5f), Var38 + Vector(5f, 5f, 5f)))
+					if (FIRE::IS_EXPLOSION_IN_AREA(-1 /*EXP_TAG_DONTCARE*/, Var38 - Vector(5f, 5f, 5f), Var38 + Vector(5f, 5f, 5f)) && !FIRE::IS_EXPLOSION_IN_AREA(23 /*EXP_TAG_GAS_CANISTER*/, Var38 - Vector(5f, 5f, 5f), Var38 + Vector(5f, 5f, 5f)))
 					{
 						if ((MISC::GET_GAME_TIMER() - iLocal_347) > 1000)
 						{
@@ -44085,7 +44085,7 @@ void func_314(struct<3> Param0)//Position - 0x33D78
 			}
 			if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iLocal_745, PLAYER::PLAYER_PED_ID(), true))
 			{
-				FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_745, true), 23, 0.1f, true, false, 0.1f, false);
+				FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_745, true), 23 /*EXP_TAG_GAS_CANISTER*/, 0.1f, true, false, 0.1f, false);
 				AUDIO::PLAY_SOUND_FROM_COORD(iLocal_308, "LAMAR1_WAREHOUSE_FIRE", -591.8f, -1602.6f, 27.3f, 0, false, 0, false);
 				Local_425[0 /*9*/].f_1 = 0.3f;
 				Local_561[0 /*9*/].f_1 = 0.1f;
@@ -44137,7 +44137,7 @@ void func_314(struct<3> Param0)//Position - 0x33D78
 		{
 			if (func_289(&Local_1557) && func_289(&Local_1431))
 			{
-				if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -605.6501f, -1626.1594f, 26.010805f, -604.42566f, -1612.3586f, 28.647781f, 3.5f, false, true, 0) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, -605.6109f, -1626.2156f, 25.76258f, -605.3935f, -1623.6409f, 28.760939f, 4f))
+				if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -605.6501f, -1626.1594f, 26.010805f, -604.42566f, -1612.3586f, 28.647781f, 3.5f, false, true, 0) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, -605.6109f, -1626.2156f, 25.76258f, -605.3935f, -1623.6409f, 28.760939f, 4f))
 				{
 					bVar46 = true;
 				}
@@ -44466,7 +44466,7 @@ void func_314(struct<3> Param0)//Position - 0x33D78
 							iLocal_304 = MISC::GET_GAME_TIMER();
 						}
 					}
-					if (((iLocal_303 > 3 && (MISC::GET_GAME_TIMER() - iLocal_304) > 400) || PED::IS_PED_INJURED(Local_1785[0 /*25*/])) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_781, 0f, 5f, -5f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_781, 0f, -5f, 5f), 8f))
+					if (((iLocal_303 > 3 && (MISC::GET_GAME_TIMER() - iLocal_304) > 400) || PED::IS_PED_INJURED(Local_1785[0 /*25*/])) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_781, 0f, 5f, -5f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_781, 0f, -5f, 5f), 8f))
 					{
 						if (!PED::IS_PED_INJURED(Local_1785[0 /*25*/]))
 						{

@@ -8879,7 +8879,7 @@ int func_172()//Position - 0xB366
 			}
 		}
 	}
-	if (FIRE::IS_EXPLOSION_IN_AREA(-1, Local_192 - Vector(20f, 20f, 20f), Local_192 + Vector(20f, 20f, 20f)))
+	if (FIRE::IS_EXPLOSION_IN_AREA(-1 /*EXP_TAG_DONTCARE*/, Local_192 - Vector(20f, 20f, 20f), Local_192 + Vector(20f, 20f, 20f)))
 	{
 		return 1;
 	}

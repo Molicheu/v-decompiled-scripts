@@ -612,7 +612,7 @@ int func_25(int iParam0, bool bParam1)//Position - 0x82C
 		{
 			return 1;
 		}
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(*iParam0, true), 15f))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(*iParam0, true), 15f))
 		{
 			return 1;
 		}

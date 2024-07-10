@@ -4882,7 +4882,7 @@ void func_123()//Position - 0x5769
 	{
 		if (!PED::IS_PED_INJURED(iLocal_53))
 		{
-			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(iLocal_53, true), 3f))
+			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(iLocal_53, true), 3f))
 			{
 				TASK::CLEAR_PED_TASKS_IMMEDIATELY(iLocal_53);
 				ENTITY::SET_ENTITY_HEALTH(iLocal_53, 99, 0, 0);

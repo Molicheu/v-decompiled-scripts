@@ -8352,9 +8352,9 @@ void func_134(int iParam0)//Position - 0xB06F
 											Local_1706[iVar0 /*6*/].f_3 = MISC::GET_GAME_TIMER() + 250;
 											Local_1706[iVar0 /*6*/].f_2 = 3;
 										}
-										if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, -1087.8014f, -1655.3491f, 6.691953f, -1089.4009f, -1654.4635f, 7.555488f, 1f))
+										if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, -1087.8014f, -1655.3491f, 6.691953f, -1089.4009f, -1654.4635f, 7.555488f, 1f))
 										{
-											if (((FIRE::IS_EXPLOSION_IN_ANGLED_AREA(0, -1087.8014f, -1655.3491f, 6.691953f, -1089.4009f, -1654.4635f, 7.555488f, 1f) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(4, -1087.8014f, -1655.3491f, 6.691953f, -1089.4009f, -1654.4635f, 7.555488f, 1f)) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(1, -1087.8014f, -1655.3491f, 6.691953f, -1089.4009f, -1654.4635f, 7.555488f, 1f)) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(2, -1087.8014f, -1655.3491f, 6.691953f, -1089.4009f, -1654.4635f, 7.555488f, 1f))
+											if (((FIRE::IS_EXPLOSION_IN_ANGLED_AREA(0 /*EXP_TAG_GRENADE*/, -1087.8014f, -1655.3491f, 6.691953f, -1089.4009f, -1654.4635f, 7.555488f, 1f) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(4 /*EXP_TAG_ROCKET*/, -1087.8014f, -1655.3491f, 6.691953f, -1089.4009f, -1654.4635f, 7.555488f, 1f)) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(1 /*EXP_TAG_GRENADELAUNCHER*/, -1087.8014f, -1655.3491f, 6.691953f, -1089.4009f, -1654.4635f, 7.555488f, 1f)) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(2 /*EXP_TAG_STICKYBOMB*/, -1087.8014f, -1655.3491f, 6.691953f, -1089.4009f, -1654.4635f, 7.555488f, 1f))
 											{
 												iLocal_1058 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(-1081.0177f, -1647.606f, 4.1603f, 0.5f, joaat("prop_wallchunk_01"), true, false, true);
 												if (ENTITY::DOES_ENTITY_EXIST(iLocal_1058))
@@ -8432,8 +8432,8 @@ void func_134(int iParam0)//Position - 0xB06F
 									{
 										ENTITY::SET_ENTITY_PROOFS(PLAYER::PLAYER_PED_ID(), false, false, true, false, false, false, false, false);
 									}
-									FIRE::ADD_EXPLOSION(-1091.2448f, -1653.5312f, 7.07065f, 34, 4f, false, true, 1f, false);
-									FIRE::ADD_EXPLOSION(-1088.8958f, -1654.3989f, 4.2178f, 34, 3.5f, false, true, 1f, false);
+									FIRE::ADD_EXPLOSION(-1091.2448f, -1653.5312f, 7.07065f, 34 /*EXP_TAG_GAS_TANK*/, 4f, false, true, 1f, false);
+									FIRE::ADD_EXPLOSION(-1088.8958f, -1654.3989f, 4.2178f, 34 /*EXP_TAG_GAS_TANK*/, 3.5f, false, true, 1f, false);
 									AUDIO::PLAY_SOUND_FROM_COORD(-1, "Gas_Explosion", -1088.8005f, -1655.5457f, 7.3146f, "ARM_2_REPO_SOUNDS", false, 0, false);
 									iLocal_1031 = MISC::GET_GAME_TIMER() + 1500;
 									if (!PED::IS_PED_INJURED(Local_1069[13 /*14*/]))
@@ -8694,7 +8694,7 @@ void func_134(int iParam0)//Position - 0xB06F
 							{
 								func_142("ARM2_F07");
 							}
-							if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, -39.62799f, -1099.2401f, 25.25259f, 26.5f))
+							if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, -39.62799f, -1099.2401f, 25.25259f, 26.5f))
 							{
 								func_142("ARM2_F07");
 							}
@@ -62861,7 +62861,7 @@ void func_587(int iParam0, int iParam1)//Position - 0x51857
 						{
 							Local_686[iVar3 /*7*/].f_2 = 1;
 						}
-						if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, -39.62799f, -1099.2401f, 25.25259f, 26.5f))
+						if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, -39.62799f, -1099.2401f, 25.25259f, 26.5f))
 						{
 							Local_686[iVar3 /*7*/].f_2 = 1;
 						}
@@ -64202,7 +64202,7 @@ void func_587(int iParam0, int iParam1)//Position - 0x51857
 								}
 							}
 						}
-						if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, -1107.71f, -1629.62f, 3.57f, 5f))
+						if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, -1107.71f, -1629.62f, 3.57f, 5f))
 						{
 							Local_686[iVar3 /*7*/].f_4 = MISC::GET_GAME_TIMER();
 						}

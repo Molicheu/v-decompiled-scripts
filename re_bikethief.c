@@ -5217,7 +5217,7 @@ int func_155()//Position - 0x5946
 		{
 			return 1;
 		}
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, PED::GET_PED_BONE_COORDS(iLocal_90, 31086, 0f, 0f, 0f), 6f))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, PED::GET_PED_BONE_COORDS(iLocal_90, 31086, 0f, 0f, 0f), 6f))
 		{
 			return 1;
 		}

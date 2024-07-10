@@ -907,7 +907,7 @@ void func_9()//Position - 0x391
 				}
 				if ((ENTITY::IS_ENTITY_AT_COORD(Local_411.f_3, 347.8621f, -983.6118f, 31.308886f, 4f, 3f, 3f, false, true, 0) && ENTITY::IS_ENTITY_AT_COORD(Local_411.f_4, Local_411.f_17, 10f, 10f, 10f, false, true, 0)) && iLocal_859)
 				{
-					FIRE::ADD_EXPLOSION(344.5906f, -996.409f, 28.30219f, 4, 0.5f, true, false, 1f, false);
+					FIRE::ADD_EXPLOSION(344.5906f, -996.409f, 28.30219f, 4 /*EXP_TAG_ROCKET*/, 0.5f, true, false, 1f, false);
 					AUDIO::PLAY_SOUND_FROM_COORD(iLocal_873, "Burglar_Bell", 340.8f, -965.4f, 28.4f, "Generic_Alarms", false, 0, false);
 					iLocal_859 = 0;
 				}

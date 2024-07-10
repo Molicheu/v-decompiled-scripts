@@ -9797,7 +9797,7 @@ int func_217(var uParam0, bool bParam1)//Position - 0xDBCD
 	}
 	if (*uParam0 == 10)
 	{
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, uParam0->f_17[0 /*3*/], 8f))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, uParam0->f_17[0 /*3*/], 8f))
 		{
 			func_297("IS_RC_FINE_AND_IN_RANGE(): Explosion near mission trigger [TERMINATING]");
 			return 0;
@@ -10315,7 +10315,7 @@ int func_227(var uParam0, bool bParam1, int iParam2)//Position - 0xE78F
 								return 0;
 							}
 						}
-						if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(uParam0->f_28[iVar0], true), 15f))
+						if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(uParam0->f_28[iVar0], true), 15f))
 						{
 							if (iParam2 == 0)
 							{
@@ -10344,7 +10344,7 @@ int func_227(var uParam0, bool bParam1, int iParam2)//Position - 0xE78F
 					}
 					if (!func_228(*uParam0))
 					{
-						if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(uParam0->f_28[iVar0], true), 5f))
+						if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(uParam0->f_28[iVar0], true), 5f))
 						{
 							if (iParam2 == 0)
 							{

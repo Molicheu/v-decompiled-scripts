@@ -121822,7 +121822,7 @@ int func_876()//Position - 0x995EC
 				}
 				if (!ENTITY::IS_ENTITY_IN_WATER(Local_80.f_0))
 				{
-					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_80.f_0, false), 0, 2f, true, false, 1f, false);
+					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_80.f_0, false), 0 /*EXP_TAG_GRENADE*/, 2f, true, false, 1f, false);
 				}
 				if (HUD::DOES_BLIP_EXIST(Local_80.f_2))
 				{
@@ -127986,7 +127986,7 @@ int func_974()//Position - 0xA4B73
 				if (fLocal_5031 > 0.5f && fLocal_5032 < -0.5f)
 				{
 					GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_fbi_dd_breach_smoke", 118f, -736f, 254f, -3.17f, 0f, 163.62f, 1f, false, false, false);
-					FIRE::ADD_EXPLOSION(130.2394f, -746.8553f, 253.1524f, 0, 0.5f, true, false, 1f, false);
+					FIRE::ADD_EXPLOSION(130.2394f, -746.8553f, 253.1524f, 0 /*EXP_TAG_GRENADE*/, 0.5f, true, false, 1f, false);
 					AUDIO::TRIGGER_MUSIC_EVENT("AH3A_DOORS_EXPLODE");
 					bLocal_4674 = true;
 				}
@@ -129157,9 +129157,9 @@ int func_989()//Position - 0xA735D
 			if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), 142.255f, -758.357f, 257.152f, 146.752f, -746.266f, 260.152f, 2f, false, true, 0))
 			{
 				AUDIO::RELEASE_NAMED_SCRIPT_AUDIO_BANK("SCRIPT\FBI_Heist_5_Animations");
-				FIRE::ADD_EXPLOSION(132f, -753.5f, 263.3f, 0, 0.3f, false, true, 0f, false);
-				FIRE::ADD_EXPLOSION(130.3f, -747.3f, 263.5f, 0, 0.5f, false, true, 0f, false);
-				FIRE::ADD_EXPLOSION(133.5f, -743.1f, 263f, 0, 0.5f, false, true, 0f, false);
+				FIRE::ADD_EXPLOSION(132f, -753.5f, 263.3f, 0 /*EXP_TAG_GRENADE*/, 0.3f, false, true, 0f, false);
+				FIRE::ADD_EXPLOSION(130.3f, -747.3f, 263.5f, 0 /*EXP_TAG_GRENADE*/, 0.5f, false, true, 0f, false);
+				FIRE::ADD_EXPLOSION(133.5f, -743.1f, 263f, 0 /*EXP_TAG_GRENADE*/, 0.5f, false, true, 0f, false);
 				GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_agency_atrium_glass", 130.2f, -752.2f, 262.7f, 0f, 0f, 0f, 1f, false, false, false);
 				GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_agency_atrium_glass", 131f, -743.8f, 262.7f, 0f, 0f, 0f, 1f, false, false, false);
 				if (AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\FBI_HEIST_RAID_GLASS_SMASH", false, -1))
@@ -141353,7 +141353,7 @@ int func_1184()//Position - 0xBE149
 				return 1;
 			}
 		}
-		if (MISC::IS_PROJECTILE_TYPE_IN_ANGLED_AREA(131.066f, -781.433f, 41.656f, 161.13f, -698.834f, 55.056f, 147.8f, joaat("WEAPON_STICKYBOMB"), false) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, 131.066f, -781.433f, 41.656f, 161.13f, -698.834f, 55.056f, 147.8f))
+		if (MISC::IS_PROJECTILE_TYPE_IN_ANGLED_AREA(131.066f, -781.433f, 41.656f, 161.13f, -698.834f, 55.056f, 147.8f, joaat("WEAPON_STICKYBOMB"), false) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, 131.066f, -781.433f, 41.656f, 161.13f, -698.834f, 55.056f, 147.8f))
 		{
 			return 1;
 		}

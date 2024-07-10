@@ -520,7 +520,7 @@ void func_3()//Position - 0x39F
 	}
 	else if (func_42(iLocal_390) && func_42(PLAYER::PLAYER_PED_ID()))
 	{
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(iLocal_390, true), 2f) && !FIRE::IS_EXPLOSION_IN_SPHERE(13, ENTITY::GET_ENTITY_COORDS(iLocal_390, true), 2f))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(iLocal_390, true), 2f) && !FIRE::IS_EXPLOSION_IN_SPHERE(13 /*EXP_TAG_DIR_WATER_HYDRANT*/, ENTITY::GET_ENTITY_COORDS(iLocal_390, true), 2f))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iLocal_390, true);
 			PED::SET_PED_TO_RAGDOLL(iLocal_390, 500, 1000, 0, false, false, false);

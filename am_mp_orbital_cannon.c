@@ -2793,7 +2793,7 @@ void func_73(struct<3> Param0)//Position - 0x220A
 					Var4 = { ENTITY::GET_ENTITY_COORDS(iVar10, false) };
 					if (MISC::GET_DISTANCE_BETWEEN_COORDS(Param0, Var4, false) < 15f && Var4.f_2 >= (Param0.f_2 - 15f))
 					{
-						FIRE::ADD_OWNED_EXPLOSION(PLAYER::PLAYER_PED_ID(), Var4, 59, 1f, true, false, 1f);
+						FIRE::ADD_OWNED_EXPLOSION(PLAYER::PLAYER_PED_ID(), Var4, 59 /*EXP_TAG_ORBITAL_CANNON*/, 1f, true, false, 1f);
 					}
 				}
 			}
@@ -2810,13 +2810,13 @@ void func_73(struct<3> Param0)//Position - 0x220A
 					Var7 = { ENTITY::GET_ENTITY_COORDS(Global_1578068[iVar14], false) };
 					if (MISC::GET_DISTANCE_BETWEEN_COORDS(Param0, Var7, false) < 15f && Var7.f_2 >= (Param0.f_2 - 15f))
 					{
-						FIRE::ADD_OWNED_EXPLOSION(PLAYER::PLAYER_PED_ID(), Var7, 59, 1f, true, false, 1f);
+						FIRE::ADD_OWNED_EXPLOSION(PLAYER::PLAYER_PED_ID(), Var7, 59 /*EXP_TAG_ORBITAL_CANNON*/, 1f, true, false, 1f);
 					}
 				}
 			}
 			iVar14++;
 		}
-		FIRE::ADD_OWNED_EXPLOSION(PLAYER::PLAYER_PED_ID(), Param0, 59, 1f, true, false, 1f);
+		FIRE::ADD_OWNED_EXPLOSION(PLAYER::PLAYER_PED_ID(), Param0, 59 /*EXP_TAG_ORBITAL_CANNON*/, 1f, true, false, 1f);
 		GRAPHICS::USE_PARTICLE_FX_ASSET("scr_xm_orbital");
 		GRAPHICS::START_NETWORKED_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_xm_orbital_blast", Param0, Var1, 1f, false, false, false, true);
 		if (!Global_1962235)

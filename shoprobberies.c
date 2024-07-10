@@ -10672,7 +10672,7 @@ int func_233()//Position - 0xE5B1
 
 int func_234()//Position - 0xE5D6
 {
-	if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, Local_66.f_186, Local_66.f_189, Local_66.f_192))
+	if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, Local_66.f_186, Local_66.f_189, Local_66.f_192))
 	{
 		return 1;
 	}

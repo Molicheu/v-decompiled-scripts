@@ -38055,7 +38055,7 @@ void func_290()//Position - 0x2A75C
 				}
 				if (iLocal_422 == 0)
 				{
-					if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, 1114.6968f, -787.0848f, 56.648468f, 1051.7637f, -787.16095f, 64.14056f, 23f))
+					if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, 1114.6968f, -787.0848f, 56.648468f, 1051.7637f, -787.16095f, 64.14056f, 23f))
 					{
 						if (func_235(Local_293[0 /*9*/]))
 						{

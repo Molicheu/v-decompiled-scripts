@@ -759,7 +759,7 @@ void func_3()//Position - 0x31D
 					break;
 			}
 		}
-		else if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(iLocal_85, true), 20f))
+		else if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(iLocal_85, true), 20f))
 		{
 			func_4();
 		}

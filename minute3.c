@@ -43901,7 +43901,7 @@ void func_413()//Position - 0x3276D
 			}
 			break;
 	}
-	if ((ENTITY::DOES_ENTITY_EXIST(iLocal_280) && (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iLocal_280, PLAYER::PLAYER_PED_ID(), true) || !func_40(iLocal_280))) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, Local_197, 50f))
+	if ((ENTITY::DOES_ENTITY_EXIST(iLocal_280) && (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iLocal_280, PLAYER::PLAYER_PED_ID(), true) || !func_40(iLocal_280))) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Local_197, 50f))
 	{
 		func_418(0);
 	}

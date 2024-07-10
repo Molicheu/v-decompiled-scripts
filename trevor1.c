@@ -124311,7 +124311,7 @@ void func_840()//Position - 0x9BA2A
 	}
 	if (!func_95("T1M1_DVA"))
 	{
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), 12f))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), 12f))
 		{
 			if (!func_639())
 			{
@@ -125075,7 +125075,7 @@ void func_846()//Position - 0x9CAEE
 						ENTITY::FREEZE_ENTITY_POSITION(iLocal_6442[7], false);
 						ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(iLocal_6442[7], false);
 						ENTITY::SET_ENTITY_CAN_BE_DAMAGED(iLocal_6442[7], true);
-						FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_6442[14], false), 8, 2f, false, false, 0f, false);
+						FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_6442[14], false), 8 /*EXP_TAG_PLANE*/, 2f, false, false, 0f, false);
 						ENTITY::SET_ENTITY_HEALTH(iLocal_6442[7], 0, 0, 0);
 					}
 					if (!PED::IS_PED_INJURED(Local_1819[38 /*34*/]))
@@ -125111,7 +125111,7 @@ void func_846()//Position - 0x9CAEE
 						ENTITY::FREEZE_ENTITY_POSITION(iLocal_6442[14], false);
 						ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(iLocal_6442[14], false);
 						ENTITY::SET_ENTITY_CAN_BE_DAMAGED(iLocal_6442[14], true);
-						FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_6442[7], false), 8, 2f, false, false, 0f, false);
+						FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_6442[7], false), 8 /*EXP_TAG_PLANE*/, 2f, false, false, 0f, false);
 						ENTITY::SET_ENTITY_IS_TARGET_PRIORITY(iLocal_6442[14], false, 0.5f);
 						OBJECT::SET_OBJECT_TARGETTABLE(iLocal_6442[14], false, 0);
 					}
@@ -125182,8 +125182,8 @@ void func_846()//Position - 0x9CAEE
 		case 6:
 			if (func_10(&iLocal_6304, 120))
 			{
-				FIRE::ADD_EXPLOSION(37.73f, 3734.61f, 39.77f, 8, 2f, false, false, 0f, false);
-				FIRE::ADD_EXPLOSION(31.0599f, 3736.0564f, 39.6304f, 27, 2f, false, false, 0f, false);
+				FIRE::ADD_EXPLOSION(37.73f, 3734.61f, 39.77f, 8 /*EXP_TAG_PLANE*/, 2f, false, false, 0f, false);
+				FIRE::ADD_EXPLOSION(31.0599f, 3736.0564f, 39.6304f, 27 /*EXP_TAG_BARREL*/, 2f, false, false, 0f, false);
 				RECORDING::REPLAY_RECORD_BACK_FOR_TIME(2f, 2f, 3);
 				if (!ENTITY::IS_ENTITY_DEAD(Local_1819[38 /*34*/], false))
 				{

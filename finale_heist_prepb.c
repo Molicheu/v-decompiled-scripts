@@ -10063,7 +10063,7 @@ void func_206()//Position - 0xC331
 	}
 	if (iLocal_29 != 2)
 	{
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, 892.9f, -1552.4f, 30f, 40f))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, 892.9f, -1552.4f, 30f, 40f))
 		{
 			iLocal_29 = 2;
 			iLocal_396 = 1;
@@ -10293,7 +10293,7 @@ void func_207()//Position - 0xCF26
 					}
 					if (iLocal_27 != 4)
 					{
-						if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, 892.9f, -1552.4f, 30f, 40f))
+						if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, 892.9f, -1552.4f, 30f, 40f))
 						{
 							func_211(4);
 							if (iLocal_414 == 1)

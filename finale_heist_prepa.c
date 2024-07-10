@@ -4877,7 +4877,7 @@ void func_153(int iParam0)//Position - 0x52A9
 	func_175(iParam0);
 	if (!func_174(iParam0))
 	{
-		if (func_155(Local_387[iParam0 /*22*/], 1, 50f, 140f, 0, 1, 1, 1) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(Local_387[iParam0 /*22*/], true), 100f))
+		if (func_155(Local_387[iParam0 /*22*/], 1, 50f, 140f, 0, 1, 1, 1) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(Local_387[iParam0 /*22*/], true), 100f))
 		{
 			if ((!PED::IS_PED_BEING_STEALTH_KILLED(Local_387[iParam0 /*22*/]) && !PED::WAS_PED_KILLED_BY_STEALTH(Local_387[iParam0 /*22*/])) && !PED::WAS_PED_KILLED_BY_TAKEDOWN(Local_387[iParam0 /*22*/]))
 			{
@@ -6745,7 +6745,7 @@ void func_204(int iParam0)//Position - 0x785E
 		{
 			func_126();
 		}
-		else if (func_155(Local_387[iParam0 /*22*/], 1, 70f, 150f, 0, 1, 0, 1) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(Local_387[iParam0 /*22*/], true), 100f))
+		else if (func_155(Local_387[iParam0 /*22*/], 1, 70f, 150f, 0, 1, 0, 1) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(Local_387[iParam0 /*22*/], true), 100f))
 		{
 			func_126();
 		}

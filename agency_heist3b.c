@@ -133102,8 +133102,8 @@ void func_1026()//Position - 0xA9507
 						ENTITY::SET_ENTITY_HEALTH(Local_7160.f_1, 1, 0, 0);
 					}
 				}
-				FIRE::ADD_EXPLOSION(Var0, 4, 1f, true, false, 1f, false);
-				FIRE::ADD_EXPLOSION(129.716f, -744.668f, 263.7435f, 4, 1f, false, true, 0f, false);
+				FIRE::ADD_EXPLOSION(Var0, 4 /*EXP_TAG_ROCKET*/, 1f, true, false, 1f, false);
+				FIRE::ADD_EXPLOSION(129.716f, -744.668f, 263.7435f, 4 /*EXP_TAG_ROCKET*/, 1f, false, true, 0f, false);
 				iLocal_3934[1] = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_agency3b_shot_chopper", Local_2090[1 /*88*/], 0.0453f, -7.5946f, 1.6338f, 0f, 0f, 0f, 1f, false, false, false);
 				if (GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(Local_7160.f_23))
 				{
@@ -136291,7 +136291,7 @@ void func_1051()//Position - 0xB1319
 			{
 				ENTITY::STOP_SYNCHRONIZED_ENTITY_ANIM(Local_3863[11 /*2*/], -1000f, false);
 				ENTITY::FREEZE_ENTITY_POSITION(Local_3863[11 /*2*/], true);
-				FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_3863[11 /*2*/], true), 19, 1f, true, false, 1f, false);
+				FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_3863[11 /*2*/], true), 19 /*EXP_TAG_SMOKEGRENADELAUNCHER*/, 1f, true, false, 1f, false);
 				if (GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(iLocal_3934[2]))
 				{
 					GRAPHICS::STOP_PARTICLE_FX_LOOPED(iLocal_3934[2], false);

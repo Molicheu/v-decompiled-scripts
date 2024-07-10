@@ -106973,7 +106973,7 @@ void func_661()//Position - 0x7C134
 								Local_1072[7 /*3*/].f_1 = 0;
 							}
 						}
-						FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_3891[1 /*3*/], false), 4, 1f, true, false, 1f, false);
+						FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_3891[1 /*3*/], false), 4 /*EXP_TAG_ROCKET*/, 1f, true, false, 1f, false);
 						iLocal_721 = 100800000;
 						iLocal_719 = (iLocal_719 - iLocal_721);
 						SYSTEM::SETTIMERB(0);
@@ -107394,7 +107394,7 @@ void func_664(float fParam0, float fParam1)//Position - 0x7D3F6
 						{
 							ENTITY::SET_ENTITY_INVINCIBLE(iLocal_384[iVar2], false);
 							ENTITY::SET_ENTITY_PROOFS(iLocal_384[iVar2], false, false, false, false, false, false, false, false);
-							FIRE::ADD_EXPLOSION(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_384[iVar2], 0f, 2.5f, 0f), 4, 1f, true, false, 1f, false);
+							FIRE::ADD_EXPLOSION(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_384[iVar2], 0f, 2.5f, 0f), 4 /*EXP_TAG_ROCKET*/, 1f, true, false, 1f, false);
 							if (VEHICLE::GET_VEHICLE_ENGINE_HEALTH(iLocal_384[iVar2]) > -599f)
 							{
 								VEHICLE::SET_VEHICLE_ENGINE_HEALTH(iLocal_384[iVar2], -600f);
@@ -107767,7 +107767,7 @@ void func_665()//Position - 0x7E12D
 						VEHICLE::SET_VEHICLE_PETROL_TANK_HEALTH(Local_1097[iVar0 /*28*/].f_2, -100f);
 					}
 				}
-				FIRE::ADD_EXPLOSION(Var2, 4, 1f, true, false, 1f, false);
+				FIRE::ADD_EXPLOSION(Var2, 4 /*EXP_TAG_ROCKET*/, 1f, true, false, 1f, false);
 				if (Local_1097[iVar0 /*28*/].f_27 != 0)
 				{
 					GRAPHICS::STOP_PARTICLE_FX_LOOPED(Local_1097[iVar0 /*28*/].f_27, false);
@@ -111911,7 +111911,7 @@ void func_745()//Position - 0x835B9
 				{
 					if ((PED::IS_PED_INJURED(Local_2567[0 /*20*/]) || !VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(iLocal_930)) || fVar14 > 6000f)
 					{
-						if ((((PED::IS_PED_INJURED(Local_2567[0 /*20*/]) || ENTITY::GET_ENTITY_HEALTH(iLocal_930) < 900) || VEHICLE::GET_VEHICLE_PETROL_TANK_HEALTH(iLocal_930) < 700f) || VEHICLE::GET_VEHICLE_ENGINE_HEALTH(iLocal_930) < 700f) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_930, 0f, 5f, -5f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_930, 0f, -5f, 5f), 8f))
+						if ((((PED::IS_PED_INJURED(Local_2567[0 /*20*/]) || ENTITY::GET_ENTITY_HEALTH(iLocal_930) < 900) || VEHICLE::GET_VEHICLE_PETROL_TANK_HEALTH(iLocal_930) < 700f) || VEHICLE::GET_VEHICLE_ENGINE_HEALTH(iLocal_930) < 700f) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_930, 0f, 5f, -5f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_930, 0f, -5f, 5f), 8f))
 						{
 							ENTITY::SET_ENTITY_HEALTH(iLocal_930, 1000, 0, 0);
 							if (!PED::IS_PED_INJURED(Local_2567[0 /*20*/]))
@@ -112533,7 +112533,7 @@ void func_745()//Position - 0x835B9
 				{
 					if (Local_2628[0 /*20*/].f_6 == 100)
 					{
-						if ((((PED::IS_PED_INJURED(Local_2628[0 /*20*/]) || ENTITY::GET_ENTITY_HEALTH(iLocal_931) < 700) || VEHICLE::GET_VEHICLE_PETROL_TANK_HEALTH(iLocal_931) < 700f) || VEHICLE::GET_VEHICLE_ENGINE_HEALTH(iLocal_931) < 700f) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_931, 0f, 5f, -5f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_931, 0f, -5f, 5f), 8f))
+						if ((((PED::IS_PED_INJURED(Local_2628[0 /*20*/]) || ENTITY::GET_ENTITY_HEALTH(iLocal_931) < 700) || VEHICLE::GET_VEHICLE_PETROL_TANK_HEALTH(iLocal_931) < 700f) || VEHICLE::GET_VEHICLE_ENGINE_HEALTH(iLocal_931) < 700f) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_931, 0f, 5f, -5f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_931, 0f, -5f, 5f), 8f))
 						{
 							if (!PED::IS_PED_INJURED(Local_2628[0 /*20*/]))
 							{
@@ -113209,7 +113209,7 @@ void func_745()//Position - 0x835B9
 				{
 					if (Local_2669[0 /*20*/].f_6 < 100)
 					{
-						bVar28 = FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_932, 0f, 5f, -5f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_932, 0f, -5f, 5f), 8f);
+						bVar28 = FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_932, 0f, 5f, -5f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_932, 0f, -5f, 5f), 8f);
 						if ((((PED::IS_PED_INJURED(Local_2669[0 /*20*/]) || ENTITY::GET_ENTITY_HEALTH(iLocal_932) < 600) || VEHICLE::GET_VEHICLE_PETROL_TANK_HEALTH(iLocal_932) < 600f) || VEHICLE::GET_VEHICLE_ENGINE_HEALTH(iLocal_932) < 600f) || bVar28)
 						{
 							if (!PED::IS_PED_INJURED(Local_2669[0 /*20*/]))
@@ -114116,7 +114116,7 @@ void func_745()//Position - 0x835B9
 				func_754(iLocal_959, &fLocal_649, 16000f, 30000f);
 				if (Local_3623[0 /*20*/].f_6 < 100)
 				{
-					bVar47 = FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_959, 0f, 5f, -5f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_959, 0f, -5f, 5f), 8f);
+					bVar47 = FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_959, 0f, 5f, -5f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_959, 0f, -5f, 5f), 8f);
 					if ((((PED::IS_PED_INJURED(Local_3623[0 /*20*/]) || ENTITY::GET_ENTITY_HEALTH(iLocal_959) < 500) || VEHICLE::GET_VEHICLE_PETROL_TANK_HEALTH(iLocal_959) < 500f) || VEHICLE::GET_VEHICLE_ENGINE_HEALTH(iLocal_959) < 500f) || bVar47)
 					{
 						if (!PED::IS_PED_INJURED(Local_3623[0 /*20*/]))
@@ -114267,7 +114267,7 @@ void func_745()//Position - 0x835B9
 								}
 								if (Var4.f_2 < 43.5f)
 								{
-									if (FIRE::IS_EXPLOSION_IN_AREA(32, -174.9f, -581.7f, 46.5f, -139f, -548.8f, 59.3f))
+									if (FIRE::IS_EXPLOSION_IN_AREA(32 /*EXP_TAG_PLANE_ROCKET*/, -174.9f, -581.7f, 46.5f, -139f, -548.8f, 59.3f))
 									{
 										if (!PED::IS_PED_INJURED(Local_1222[3 /*14*/]))
 										{
@@ -122340,8 +122340,8 @@ void func_800()//Position - 0x986B4
 				{
 					CAM::DO_SCREEN_FADE_IN(800);
 				}
-				FIRE::ADD_EXPLOSION(2.7727f, -660.9886f, 16.7971f, 4, 1f, false, true, 0f, false);
-				FIRE::ADD_EXPLOSION(7.8554f, -662.5552f, 16.5439f, 4, 1f, false, true, 0f, false);
+				FIRE::ADD_EXPLOSION(2.7727f, -660.9886f, 16.7971f, 4 /*EXP_TAG_ROCKET*/, 1f, false, true, 0f, false);
+				FIRE::ADD_EXPLOSION(7.8554f, -662.5552f, 16.5439f, 4 /*EXP_TAG_ROCKET*/, 1f, false, true, 0f, false);
 				while (!CAM::IS_SCREEN_FADED_IN())
 				{
 					func_815();
@@ -125717,8 +125717,8 @@ void func_856()//Position - 0x9E25F
 					VEHICLE::SET_HELI_BLADES_FULL_SPEED(Local_3891[0 /*3*/]);
 				}
 				func_819(0);
-				FIRE::ADD_EXPLOSION(2.7727f, -660.9886f, 16.7971f, 0, 0.5f, true, false, 1f, false);
-				FIRE::ADD_EXPLOSION(7.8554f, -662.5552f, 16.5439f, 0, 0.5f, true, false, 1f, false);
+				FIRE::ADD_EXPLOSION(2.7727f, -660.9886f, 16.7971f, 0 /*EXP_TAG_GRENADE*/, 0.5f, true, false, 1f, false);
+				FIRE::ADD_EXPLOSION(7.8554f, -662.5552f, 16.5439f, 0 /*EXP_TAG_GRENADE*/, 0.5f, true, false, 1f, false);
 				func_265(1, 1);
 				func_264(Local_1222[2 /*14*/], 1);
 				AUDIO::SET_PORTAL_SETTINGS_OVERRIDE("V_FINALEBANK_PS_VAULT_INTACT", "V_FINALEBANK_PS_VAULT_BLOWN");
@@ -126190,8 +126190,8 @@ void func_861()//Position - 0x9F20B
 					ENTITY::SET_ENTITY_HEADING(Local_1222[2 /*14*/], 123.1396f);
 				}
 				func_819(0);
-				FIRE::ADD_EXPLOSION(2.7727f, -660.9886f, 16.7971f, 0, 0.5f, true, false, 1f, false);
-				FIRE::ADD_EXPLOSION(7.8554f, -662.5552f, 16.5439f, 0, 0.5f, true, false, 1f, false);
+				FIRE::ADD_EXPLOSION(2.7727f, -660.9886f, 16.7971f, 0 /*EXP_TAG_GRENADE*/, 0.5f, true, false, 1f, false);
+				FIRE::ADD_EXPLOSION(7.8554f, -662.5552f, 16.5439f, 0 /*EXP_TAG_GRENADE*/, 0.5f, true, false, 1f, false);
 				func_265(1, 1);
 				func_264(Local_1222[2 /*14*/], 1);
 				SYSTEM::SETTIMERB(0);
@@ -128226,7 +128226,7 @@ void func_872()//Position - 0xA305D
 							{
 								if (SYSTEM::TIMERB() > 500)
 								{
-									bVar0 = FIRE::IS_EXPLOSION_IN_ANGLED_AREA(2, 2.363872f, -662.0978f, 15.01227f, 3.22894f, -659.7196f, 18.044346f, 0.75f);
+									bVar0 = FIRE::IS_EXPLOSION_IN_ANGLED_AREA(2 /*EXP_TAG_STICKYBOMB*/, 2.363872f, -662.0978f, 15.01227f, 3.22894f, -659.7196f, 18.044346f, 0.75f);
 									if (bVar0 || SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(iLocal_891[0], true), Local_810) > 0.5f)
 									{
 										if (bVar0)
@@ -128271,7 +128271,7 @@ void func_872()//Position - 0xA305D
 							{
 								if (SYSTEM::TIMERB() > 500)
 								{
-									bVar0 = FIRE::IS_EXPLOSION_IN_ANGLED_AREA(2, 8.365052f, -661.62714f, 15.011101f, 7.536329f, -663.9026f, 17.999533f, 0.75f);
+									bVar0 = FIRE::IS_EXPLOSION_IN_ANGLED_AREA(2 /*EXP_TAG_STICKYBOMB*/, 8.365052f, -661.62714f, 15.011101f, 7.536329f, -663.9026f, 17.999533f, 0.75f);
 									if (bVar0 || SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(iLocal_891[1], true), Local_813) > 0.5f)
 									{
 										if (bVar0)
@@ -129783,7 +129783,7 @@ void func_877()//Position - 0xA53AD
 		}
 		if (iLocal_656 < 50)
 		{
-			if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, -23.45337f, -738.7726f, 29.26361f, 10.948552f, -649.32294f, 272.37796f, 87.5f) || MISC::IS_BULLET_IN_BOX(-23.45337f, -738.7726f, 29.26361f, 10.948552f, -649.32294f, 272.37796f, false))
+			if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, -23.45337f, -738.7726f, 29.26361f, 10.948552f, -649.32294f, 272.37796f, 87.5f) || MISC::IS_BULLET_IN_BOX(-23.45337f, -738.7726f, 29.26361f, 10.948552f, -649.32294f, 272.37796f, false))
 			{
 				func_1053(8);
 			}

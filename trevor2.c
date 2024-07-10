@@ -105860,7 +105860,7 @@ void func_627()//Position - 0x7DB1D
 					iLocal_5939 = MISC::GET_GAME_TIMER();
 					ENTITY::SET_ENTITY_HEALTH(iLocal_5738[1], 105, 0, 0);
 					ENTITY::FREEZE_ENTITY_POSITION(iLocal_5738[1], false);
-					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_5738[1], true), 8, 0.5f, true, false, 1f, false);
+					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_5738[1], true), 8 /*EXP_TAG_PLANE*/, 0.5f, true, false, 1f, false);
 					iLocal_5834 = MISC::GET_GAME_TIMER();
 					if (func_77("SJC_BLOW"))
 					{
@@ -105886,7 +105886,7 @@ void func_627()//Position - 0x7DB1D
 						ENTITY::SET_ENTITY_DYNAMIC(iLocal_5738[1], false);
 						PHYSICS::SET_DISABLE_BREAKING(iLocal_5738[1], false);
 						RECORDING::REPLAY_RECORD_BACK_FOR_TIME(2f, 4.5f, 3);
-						FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_5738[1], true), 8, 0.5f, true, false, 1f, false);
+						FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_5738[1], true), 8 /*EXP_TAG_PLANE*/, 0.5f, true, false, 1f, false);
 						iLocal_5834 = MISC::GET_GAME_TIMER();
 						if (func_77("SJC_BLOW"))
 						{
@@ -105933,19 +105933,19 @@ void func_627()//Position - 0x7DB1D
 				{
 					ENTITY::FREEZE_ENTITY_POSITION(Local_4413[5 /*19*/], false);
 					ENTITY::APPLY_FORCE_TO_ENTITY(Local_4413[5 /*19*/], 3, fLocal_5868, fLocal_5869, fLocal_5870, 0f, 0f, 0f, 0, true, true, true, false, true);
-					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[5 /*19*/], true), 6, 1f, true, false, 1.2f, false);
+					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[5 /*19*/], true), 6 /*EXP_TAG_HI_OCTANE*/, 1f, true, false, 1.2f, false);
 				}
 				if (ENTITY::DOES_ENTITY_EXIST(iLocal_5738[1]))
 				{
 					if (!ENTITY::IS_ENTITY_DEAD(iLocal_5738[1], false))
 					{
-						FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_5738[1], false), 8, 0.5f, true, false, 1f, false);
+						FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_5738[1], false), 8 /*EXP_TAG_PLANE*/, 0.5f, true, false, 1f, false);
 					}
 				}
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_4413[4 /*19*/], false))
 				{
 					VEHICLE::DETACH_VEHICLE_FROM_TRAILER(Local_4413[4 /*19*/]);
-					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[4 /*19*/], true), 8, 0.5f, true, false, 1f, false);
+					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[4 /*19*/], true), 8 /*EXP_TAG_PLANE*/, 0.5f, true, false, 1f, false);
 				}
 				AUDIO::PLAY_SOUND_FROM_COORD(-1, "Trevor_2_chopper_explode", ENTITY::GET_ENTITY_COORDS(Local_4413[5 /*19*/], false), "TREVOR_2_SOUNDS", false, 0, false);
 				CAM::SHAKE_GAMEPLAY_CAM("LARGE_EXPLOSION_SHAKE", 1f);
@@ -106411,29 +106411,29 @@ void func_634()//Position - 0x7ED64
 			{
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_4413[5 /*19*/], false))
 				{
-					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[5 /*19*/], true), 14, 1f, true, false, 1.5f, false);
+					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[5 /*19*/], true), 14 /*EXP_TAG_DIR_GAS_CANISTER*/, 1f, true, false, 1.5f, false);
 				}
 				else
 				{
-					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[5 /*19*/], false), 8, 1f, true, false, 1.5f, false);
+					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[5 /*19*/], false), 8 /*EXP_TAG_PLANE*/, 1f, true, false, 1.5f, false);
 				}
 			}
 			else if (iVar0 == 1)
 			{
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(Local_4413[4 /*19*/], false))
 				{
-					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[4 /*19*/], true), 8, 1f, true, false, 1.5f, false);
+					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[4 /*19*/], true), 8 /*EXP_TAG_PLANE*/, 1f, true, false, 1.5f, false);
 				}
 				else
 				{
-					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[4 /*19*/], false), 8, 1f, true, false, 1.5f, false);
+					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[4 /*19*/], false), 8 /*EXP_TAG_PLANE*/, 1f, true, false, 1.5f, false);
 				}
 			}
 			else if (iVar0 == 2)
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(iLocal_5738[1]))
 				{
-					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_5738[1], true), 8, 1f, true, false, 1.5f, false);
+					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_5738[1], true), 8 /*EXP_TAG_PLANE*/, 1f, true, false, 1.5f, false);
 				}
 			}
 			iLocal_5824 = MISC::GET_GAME_TIMER();
@@ -114480,7 +114480,7 @@ void func_690(int iParam0)//Position - 0x8CC4B
 	switch (*iParam0)
 	{
 		case 0:
-			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, 1717.39f, 3300.94f, 40.21f, 100f))
+			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, 1717.39f, 3300.94f, 40.21f, 100f))
 			{
 				iLocal_5656 = 1;
 			}
@@ -126914,7 +126914,7 @@ void func_790(int iParam0)//Position - 0x9ED16
 							{
 								ENTITY::SET_ENTITY_INVINCIBLE(Local_4413[10 /*19*/], false);
 								ENTITY::SET_ENTITY_HEALTH(Local_4413[10 /*19*/], 0, 0, 0);
-								FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[10 /*19*/], true), 9, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[10 /*19*/], true), 9 /*EXP_TAG_PETROL_PUMP*/, 0.5f, true, false, 1f, false);
 								VEHICLE::EXPLODE_VEHICLE(Local_4413[10 /*19*/], true, false);
 							}
 							iLocal_5816++;
@@ -127128,7 +127128,7 @@ void func_790(int iParam0)//Position - 0x9ED16
 						VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_4413[10 /*19*/], 5f);
 						iLocal_5091[1] = GRAPHICS::START_PARTICLE_FX_LOOPED_AT_COORD("scr_trev2_heli_wreck", ENTITY::GET_ENTITY_COORDS(Local_4413[10 /*19*/], false), 0f, 0f, 0f, 1f, false, false, false, false);
 						ENTITY::SET_ENTITY_HEALTH(Local_4413[10 /*19*/], 0, 0, 0);
-						FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[10 /*19*/], true), 9, 0.5f, true, false, 1f, false);
+						FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[10 /*19*/], true), 9 /*EXP_TAG_PETROL_PUMP*/, 0.5f, true, false, 1f, false);
 						VEHICLE::EXPLODE_VEHICLE(Local_4413[10 /*19*/], true, false);
 					}
 					if (!func_37("TRV2_TOWER_RESTART"))
@@ -127182,7 +127182,7 @@ void func_790(int iParam0)//Position - 0x9ED16
 							VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(Local_4413[10 /*19*/], 5f);
 							iLocal_5091[1] = GRAPHICS::START_PARTICLE_FX_LOOPED_AT_COORD("scr_trev2_heli_wreck", ENTITY::GET_ENTITY_COORDS(Local_4413[10 /*19*/], false), 0f, 0f, 0f, 1f, false, false, false, false);
 							ENTITY::SET_ENTITY_HEALTH(Local_4413[10 /*19*/], 0, 0, 0);
-							FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[10 /*19*/], true), 9, 0.5f, true, false, 1f, false);
+							FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_4413[10 /*19*/], true), 9 /*EXP_TAG_PETROL_PUMP*/, 0.5f, true, false, 1f, false);
 							VEHICLE::EXPLODE_VEHICLE(Local_4413[10 /*19*/], true, false);
 						}
 						iLocal_5873 = 6;

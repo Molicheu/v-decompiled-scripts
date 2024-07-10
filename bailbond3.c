@@ -38401,7 +38401,7 @@ int func_375(int iParam0, int iParam1, float fParam2, bool bParam3, float fParam
 				return 1;
 			}
 		}
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, Var0, fParam5))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Var0, fParam5))
 		{
 			return 1;
 		}
@@ -40614,7 +40614,7 @@ int func_425(bool bParam0)//Position - 0x2C8F8
 		{
 			return 1;
 		}
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(Local_383.f_0, true), 15f))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(Local_383.f_0, true), 15f))
 		{
 			return 1;
 		}

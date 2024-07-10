@@ -57446,7 +57446,7 @@ int func_646(int iParam0, int iParam1, struct<3> Param2, bool bParam5, bool bPar
 				return 1;
 			}
 		}
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, Var0, fParam10))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Var0, fParam10))
 		{
 			return 1;
 		}

@@ -432,7 +432,7 @@ void func_1()//Position - 0x17C
 					}
 					iLocal_160 = 1;
 				}
-				if ((PED::IS_PED_INJURED(Local_81.f_28[0]) || FIRE::IS_ENTITY_ON_FIRE(Local_81.f_28[0])) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(Local_81.f_28[0], true), 5f))
+				if ((PED::IS_PED_INJURED(Local_81.f_28[0]) || FIRE::IS_ENTITY_ON_FIRE(Local_81.f_28[0])) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(Local_81.f_28[0], true), 5f))
 				{
 					if (func_299(Local_81.f_28[0]))
 					{

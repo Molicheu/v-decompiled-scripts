@@ -1483,7 +1483,7 @@ void func_14(int iParam0)//Position - 0x98C
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		Var0 = { ENTITY::GET_ENTITY_COORDS(iParam0, true) };
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, Var0, 20f))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Var0, 20f))
 		{
 			bLocal_2222 = true;
 		}
@@ -48037,7 +48037,7 @@ void func_508()//Position - 0x37765
 		if (!bLocal_2217 && !bLocal_2206)
 		{
 			Var0 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, Var0, 40f))
+			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Var0, 40f))
 			{
 				HUD::CLEAR_PRINTS();
 				func_221();
@@ -49104,7 +49104,7 @@ void func_516()//Position - 0x37B78
 						iLocal_2212 = 1;
 					}
 				}
-				if ((ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iLocal_2310, PLAYER::PLAYER_PED_ID(), true) || WEAPON::HAS_PED_BEEN_DAMAGED_BY_WEAPON(iLocal_2310, 0, 2)) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(iLocal_2310, false), 10f))
+				if ((ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iLocal_2310, PLAYER::PLAYER_PED_ID(), true) || WEAPON::HAS_PED_BEEN_DAMAGED_BY_WEAPON(iLocal_2310, 0, 2)) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(iLocal_2310, false), 10f))
 				{
 					func_221();
 					iLocal_2300 = MISC::GET_GAME_TIMER() + 1700;

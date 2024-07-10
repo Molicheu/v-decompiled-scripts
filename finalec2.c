@@ -118441,7 +118441,7 @@ void func_852()//Position - 0x89E4A
 		}
 	}
 	iVar2 = 0;
-	if (FIRE::IS_EXPLOSION_IN_AREA(-1, -2659.4446f, 1841.3193f, 134.24051f, -2536.5315f, 1949.5579f, 180.4836f))
+	if (FIRE::IS_EXPLOSION_IN_AREA(-1 /*EXP_TAG_DONTCARE*/, -2659.4446f, 1841.3193f, 134.24051f, -2536.5315f, 1949.5579f, 180.4836f))
 	{
 		if (iLocal_582 == 0)
 		{
@@ -128718,7 +128718,7 @@ void func_1013()//Position - 0x97DED
 							bLocal_829 = true;
 						}
 					}
-					if (MISC::IS_BULLET_IN_AREA(ENTITY::GET_ENTITY_COORDS(iLocal_597[iVar0], true), 10f, true) || FIRE::IS_EXPLOSION_IN_AREA(-1, ENTITY::GET_ENTITY_COORDS(iLocal_597[iVar0], true) - Vector(20f, 20f, 20f), ENTITY::GET_ENTITY_COORDS(iLocal_597[iVar0], true) + Vector(20f, 20f, 20f)))
+					if (MISC::IS_BULLET_IN_AREA(ENTITY::GET_ENTITY_COORDS(iLocal_597[iVar0], true), 10f, true) || FIRE::IS_EXPLOSION_IN_AREA(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(iLocal_597[iVar0], true) - Vector(20f, 20f, 20f), ENTITY::GET_ENTITY_COORDS(iLocal_597[iVar0], true) + Vector(20f, 20f, 20f)))
 					{
 						bLocal_829 = true;
 					}
@@ -130509,13 +130509,13 @@ void func_1028()//Position - 0x9A2E0
 								bLocal_5064 = false;
 								if (!PED::IS_PED_INJURED(iLocal_586[0]))
 								{
-									if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(iLocal_586[0], true), 30f))
+									if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(iLocal_586[0], true), 30f))
 									{
-										if (FIRE::IS_EXPLOSION_IN_SPHERE(0, ENTITY::GET_ENTITY_COORDS(iLocal_586[0], true), 30f) || FIRE::IS_EXPLOSION_IN_SPHERE(1, ENTITY::GET_ENTITY_COORDS(iLocal_586[0], true), 30f))
+										if (FIRE::IS_EXPLOSION_IN_SPHERE(0 /*EXP_TAG_GRENADE*/, ENTITY::GET_ENTITY_COORDS(iLocal_586[0], true), 30f) || FIRE::IS_EXPLOSION_IN_SPHERE(1 /*EXP_TAG_GRENADELAUNCHER*/, ENTITY::GET_ENTITY_COORDS(iLocal_586[0], true), 30f))
 										{
 											bLocal_5064 = true;
 										}
-										else if (FIRE::IS_EXPLOSION_IN_SPHERE(18, ENTITY::GET_ENTITY_COORDS(iLocal_586[0], true), 30f) || FIRE::IS_EXPLOSION_IN_SPHERE(33, ENTITY::GET_ENTITY_COORDS(iLocal_586[0], true), 30f))
+										else if (FIRE::IS_EXPLOSION_IN_SPHERE(18 /*EXP_TAG_BULLET*/, ENTITY::GET_ENTITY_COORDS(iLocal_586[0], true), 30f) || FIRE::IS_EXPLOSION_IN_SPHERE(33 /*EXP_TAG_VEHICLE_BULLET*/, ENTITY::GET_ENTITY_COORDS(iLocal_586[0], true), 30f))
 										{
 											bLocal_5063 = false;
 										}
@@ -130591,7 +130591,7 @@ void func_1028()//Position - 0x9A2E0
 		if (!PED::IS_PED_INJURED(iLocal_586[0]))
 		{
 			Var5 = { ENTITY::GET_ENTITY_COORDS(iLocal_586[0], true) };
-			if ((((((MISC::IS_SNIPER_BULLET_IN_AREA(Var5 - Vector(5f, 5f, 5f), Var5 + Vector(5f, 5f, 5f)) || MISC::IS_BULLET_IN_AREA(Var5, 5f, true)) || FIRE::IS_EXPLOSION_IN_AREA(-1, -1878.2206f, -1214.3665f, -100.01662f, -1479.2462f, -977.3813f, 100.11576f)) || iLocal_853) || MISC::IS_PROJECTILE_IN_AREA(Var5 - Vector(10f, 10f, 10f), Var5 + Vector(10f, 10f, 10f), false)) || FIRE::GET_NUMBER_OF_FIRES_IN_RANGE(Var5, 10f) > 0) || (PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) > 0 && iLocal_41 == 1))
+			if ((((((MISC::IS_SNIPER_BULLET_IN_AREA(Var5 - Vector(5f, 5f, 5f), Var5 + Vector(5f, 5f, 5f)) || MISC::IS_BULLET_IN_AREA(Var5, 5f, true)) || FIRE::IS_EXPLOSION_IN_AREA(-1 /*EXP_TAG_DONTCARE*/, -1878.2206f, -1214.3665f, -100.01662f, -1479.2462f, -977.3813f, 100.11576f)) || iLocal_853) || MISC::IS_PROJECTILE_IN_AREA(Var5 - Vector(10f, 10f, 10f), Var5 + Vector(10f, 10f, 10f), false)) || FIRE::GET_NUMBER_OF_FIRES_IN_RANGE(Var5, 10f) > 0) || (PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) > 0 && iLocal_41 == 1))
 			{
 				if (ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), iLocal_586[0], 30f, 30f, 10f, false, true, 0))
 				{

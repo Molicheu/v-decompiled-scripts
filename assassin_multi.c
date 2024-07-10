@@ -10869,7 +10869,7 @@ void func_246(var uParam0, var uParam1)//Position - 0xAA62
 			break;
 		
 		case 1:
-			if (((((func_225(*uParam1, 0, &Local_120, &uLocal_131, 1, 0, 0, 1, 1) || func_256(&bLocal_1525)) || func_255(*uParam1, &iLocal_1598, 1f, 20f, &uLocal_1526)) || (func_244(*uParam1, 25f) && iLocal_1520)) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, -1218.0417f, -1549.6161f, -3.3703f, -1185.3494f, -1597.1029f, 10.5993f, 46f)) || iLocal_1520)
+			if (((((func_225(*uParam1, 0, &Local_120, &uLocal_131, 1, 0, 0, 1, 1) || func_256(&bLocal_1525)) || func_255(*uParam1, &iLocal_1598, 1f, 20f, &uLocal_1526)) || (func_244(*uParam1, 25f) && iLocal_1520)) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, -1218.0417f, -1549.6161f, -3.3703f, -1185.3494f, -1597.1029f, 10.5993f, 46f)) || iLocal_1520)
 			{
 				AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 				if (WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, true))
@@ -11527,7 +11527,7 @@ int func_267(int iParam0)//Position - 0xB88A
 {
 	if (iLocal_1463 == 0)
 	{
-		if ((func_225(*iParam0, 0, &Local_120, &uLocal_131, 0, 0, 0, 1, 1) || func_256(&bLocal_1525)) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, Local_1565, 25f))
+		if ((func_225(*iParam0, 0, &Local_120, &uLocal_131, 0, 0, 0, 1, 1) || func_256(&bLocal_1525)) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Local_1565, 25f))
 		{
 			return 1;
 		}

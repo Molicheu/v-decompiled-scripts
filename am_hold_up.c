@@ -1721,16 +1721,16 @@ int func_37()//Position - 0x2221
 {
 	if (Local_486.f_50 >= 15 && Local_486.f_50 <= 19)
 	{
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(9, Local_595, 40f))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(9 /*EXP_TAG_PETROL_PUMP*/, Local_595, 40f))
 		{
 			return 1;
 		}
 	}
-	if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, Local_595, Local_598, fLocal_601))
+	if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, Local_595, Local_598, fLocal_601))
 	{
 		return 1;
 	}
-	if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, Local_602, Local_605, fLocal_608))
+	if (FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, Local_602, Local_605, fLocal_608))
 	{
 		return 1;
 	}

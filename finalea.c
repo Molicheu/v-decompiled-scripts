@@ -14293,7 +14293,7 @@ void func_227()//Position - 0x105DF
 			{
 				ENTITY::SET_ENTITY_INVINCIBLE(Local_3062[1 /*2*/], false);
 			}
-			FIRE::ADD_EXPLOSION(1732.5791f, -1628.077f, 111.43906f, 7, 0.5f, true, false, 1f, false);
+			FIRE::ADD_EXPLOSION(1732.5791f, -1628.077f, 111.43906f, 7 /*EXP_TAG_CAR*/, 0.5f, true, false, 1f, false);
 			iLocal_3303 = CAM::CREATE_CAM("DEFAULT_ANIMATED_CAMERA", false);
 			CAM::SET_CAM_ACTIVE(iLocal_3303, true);
 			CAM::PLAY_CAM_ANIM(iLocal_3303, "cam_alternate_gas_tanker_explosion_outro", cLocal_3306, 1736.295f, -1619.891f, 111.29f, 0f, 0f, 0f, false, 2);

@@ -104830,7 +104830,7 @@ void func_587()//Position - 0x78DE8
 									VEHICLE::REMOVE_VEHICLE_RECORDING(122, &Local_2310);
 								}
 								VEHICLE::SET_VEHICLE_PETROL_TANK_HEALTH(iLocal_2644, -200f);
-								FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_2644, true), 17, 2f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(iLocal_2644, true), 17 /*EXP_TAG_TRUCK*/, 2f, true, false, 1f, false);
 								VEHICLE::EXPLODE_VEHICLE(iLocal_2644, true, false);
 								if (!ENTITY::IS_ENTITY_DEAD(iLocal_1777[15], false))
 								{
@@ -125552,7 +125552,7 @@ void func_969(bool bParam0, bool bParam1)//Position - 0x9AA55
 						if (iVar0 > 3)
 						{
 							Var8 = { ENTITY::GET_ENTITY_COORDS(iLocal_2613[1], false) };
-							if (FIRE::IS_EXPLOSION_IN_SPHERE(7, Var8, 3f))
+							if (FIRE::IS_EXPLOSION_IN_SPHERE(7 /*EXP_TAG_CAR*/, Var8, 3f))
 							{
 								if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(Local_3344[iVar0 /*21*/], true), Var8) < 25f)
 								{
@@ -132668,7 +132668,7 @@ bool func_1047()//Position - 0xA92E2
 		}
 	}
 	iVar1 = 0;
-	iVar2 = FIRE::GET_OWNER_OF_EXPLOSION_IN_ANGLED_AREA(-1, -106.44022f, -635.5864f, 25.639248f, 49.40485f, -692.63007f, 66.71271f, 120.75f);
+	iVar2 = FIRE::GET_OWNER_OF_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, -106.44022f, -635.5864f, 25.639248f, 49.40485f, -692.63007f, 66.71271f, 120.75f);
 	if (!ENTITY::IS_ENTITY_DEAD(iVar2, false))
 	{
 		if (ENTITY::IS_ENTITY_A_PED(iVar2))
@@ -139509,7 +139509,7 @@ void func_1090()//Position - 0xB609F
 				func_572(20);
 			}
 		}
-		iVar33 = FIRE::GET_OWNER_OF_EXPLOSION_IN_ANGLED_AREA(-1, -106.44022f, -635.5864f, 25.639248f, 49.40485f, -692.63007f, 66.71271f, 120.75f);
+		iVar33 = FIRE::GET_OWNER_OF_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, -106.44022f, -635.5864f, 25.639248f, 49.40485f, -692.63007f, 66.71271f, 120.75f);
 		if (!ENTITY::IS_ENTITY_DEAD(iVar33, false))
 		{
 			if (ENTITY::IS_ENTITY_A_PED(iVar33))

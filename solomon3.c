@@ -15739,8 +15739,8 @@ void func_271()//Position - 0x14798
 													VEHICLE::STOP_PLAYBACK_RECORDED_VEHICLE(iLocal_3119[7]);
 													VEHICLE::EXPLODE_VEHICLE(iLocal_3119[7], true, false);
 													VEHICLE::EXPLODE_VEHICLE(iLocal_3263, true, false);
-													FIRE::ADD_EXPLOSION(-1221f, -2852f, 17f, 14, 1f, true, false, 1f, false);
-													FIRE::ADD_EXPLOSION(-1212f, -2855f, 14.34f, 14, 1f, true, false, 1f, false);
+													FIRE::ADD_EXPLOSION(-1221f, -2852f, 17f, 14 /*EXP_TAG_DIR_GAS_CANISTER*/, 1f, true, false, 1f, false);
+													FIRE::ADD_EXPLOSION(-1212f, -2855f, 14.34f, 14 /*EXP_TAG_DIR_GAS_CANISTER*/, 1f, true, false, 1f, false);
 													ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&iLocal_3263);
 													ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&(iLocal_3119[1]));
 													iLocal_3433 = 1;

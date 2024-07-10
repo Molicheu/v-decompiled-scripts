@@ -13591,7 +13591,7 @@ int func_236(var uParam0, int iParam1, int iParam2)//Position - 0xB8DD
 			}
 			if (MISC::ABSF((Var0.f_2 - fLocal_4663)) > 20f && Var0.f_2 < fLocal_4663)
 			{
-				FIRE::ADD_EXPLOSION(Var0, 26, 1f, true, false, 1f, false);
+				FIRE::ADD_EXPLOSION(Var0, 26 /*EXP_TAG_TRAIN*/, 1f, true, false, 1f, false);
 			}
 			return 1;
 		}
@@ -14542,11 +14542,11 @@ void func_253(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 						else
 						{
 							GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_ojdg4_boat_exp", Var0, 0f, 0f, 0f, 3f, false, false, false);
-							FIRE::ADD_EXPLOSION(Var0 + Var3, 17, 1f, false, false, 1f, false);
-							FIRE::ADD_EXPLOSION(Var0 + Var6, 26, 1f, false, false, 1f, false);
-							FIRE::ADD_EXPLOSION(Var0 + Var9, 17, 1f, false, false, 1f, false);
-							FIRE::ADD_EXPLOSION(Var0 + Var12, 26, 1f, false, false, 1f, false);
-							FIRE::ADD_EXPLOSION(Var0, 26, 1f, false, false, 1f, false);
+							FIRE::ADD_EXPLOSION(Var0 + Var3, 17 /*EXP_TAG_TRUCK*/, 1f, false, false, 1f, false);
+							FIRE::ADD_EXPLOSION(Var0 + Var6, 26 /*EXP_TAG_TRAIN*/, 1f, false, false, 1f, false);
+							FIRE::ADD_EXPLOSION(Var0 + Var9, 17 /*EXP_TAG_TRUCK*/, 1f, false, false, 1f, false);
+							FIRE::ADD_EXPLOSION(Var0 + Var12, 26 /*EXP_TAG_TRAIN*/, 1f, false, false, 1f, false);
+							FIRE::ADD_EXPLOSION(Var0, 26 /*EXP_TAG_TRAIN*/, 1f, false, false, 1f, false);
 							GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_drug_grd_plane_exp", Var0, 0f, 0f, 0f, 3f, false, false, false);
 							func_18("DRUG_TRAFFIC_AIR_EXPLOSION_MASTER", &(uParam1->f_235), 0, 0, 0, 0, 0, 0);
 						}
@@ -14854,50 +14854,50 @@ int func_258(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4, in
 							if (iLocal_4530 == 0)
 							{
 								Var13 = { ENTITY::GET_ENTITY_COORDS(VEHICLE::GET_TRAIN_CARRIAGE(uParam3->f_312[iParam5], 0), true) };
-								FIRE::ADD_EXPLOSION(Var13 + Var1, 26, 0.5f, true, false, 1f, false);
-								FIRE::ADD_EXPLOSION(Var13 + Var4, 26, 0.5f, true, false, 1f, false);
-								FIRE::ADD_EXPLOSION(Var13 + Var7, 26, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var1, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var4, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var7, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
 								GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_drug_grd_plane_exp", Var13, 0f, 0f, 0f, 3f, false, false, false);
 								GRAPHICS::START_PARTICLE_FX_LOOPED_AT_COORD("scr_ojdg4_train_fire", Var13, 0f, 0f, 0f, 3f, false, false, false, false);
 							}
 							else if (iLocal_4530 == 1)
 							{
 								Var13 = { ENTITY::GET_ENTITY_COORDS(VEHICLE::GET_TRAIN_CARRIAGE(uParam3->f_312[iParam5], 1), true) };
-								FIRE::ADD_EXPLOSION(Var13 + Var1, 26, 0.5f, true, false, 1f, false);
-								FIRE::ADD_EXPLOSION(Var13 + Var4, 26, 0.5f, true, false, 1f, false);
-								FIRE::ADD_EXPLOSION(Var13 + Var7, 26, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var1, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var4, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var7, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
 								GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_drug_grd_plane_exp", Var13, 0f, 0f, 0f, 3f, false, false, false);
 								GRAPHICS::START_PARTICLE_FX_LOOPED_AT_COORD("scr_ojdg4_train_fire", Var13, 0f, 0f, 0f, 3f, false, false, false, false);
 							}
 							else if (iLocal_4530 == 2)
 							{
 								Var13 = { ENTITY::GET_ENTITY_COORDS(VEHICLE::GET_TRAIN_CARRIAGE(uParam3->f_312[iParam5], 2), true) };
-								FIRE::ADD_EXPLOSION(Var13 + Var1, 26, 0.5f, true, false, 1f, false);
-								FIRE::ADD_EXPLOSION(Var13 + Var4, 26, 0.5f, true, false, 1f, false);
-								FIRE::ADD_EXPLOSION(Var13 + Var7, 26, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var1, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var4, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var7, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
 								GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_drug_grd_plane_exp", Var13, 0f, 0f, 0f, 3f, false, false, false);
 								GRAPHICS::START_PARTICLE_FX_LOOPED_AT_COORD("scr_ojdg4_train_fire", Var13, 0f, 0f, 0f, 3f, false, false, false, false);
 							}
 							else if (iLocal_4530 == 3)
 							{
 								Var13 = { ENTITY::GET_ENTITY_COORDS(VEHICLE::GET_TRAIN_CARRIAGE(uParam3->f_312[iParam5], 3), true) };
-								FIRE::ADD_EXPLOSION(Var13 + Var1, 26, 0.5f, true, false, 1f, false);
-								FIRE::ADD_EXPLOSION(Var13 + Var4, 26, 0.5f, true, false, 1f, false);
-								FIRE::ADD_EXPLOSION(Var13 + Var7, 26, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var1, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var4, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var7, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
 								GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_drug_grd_plane_exp", Var13, 0f, 0f, 0f, 3f, false, false, false);
 								GRAPHICS::START_PARTICLE_FX_LOOPED_AT_COORD("scr_ojdg4_train_fire", Var13, 0f, 0f, 0f, 3f, false, false, false, false);
 							}
 							else if (iLocal_4530 == 4)
 							{
 								Var13 = { ENTITY::GET_ENTITY_COORDS(VEHICLE::GET_TRAIN_CARRIAGE(uParam3->f_312[iParam5], 4), true) };
-								FIRE::ADD_EXPLOSION(Var13 + Var1, 26, 0.5f, true, false, 1f, false);
-								FIRE::ADD_EXPLOSION(Var13 + Var4, 26, 0.5f, true, false, 1f, false);
-								FIRE::ADD_EXPLOSION(Var13 + Var7, 26, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var1, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var4, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
+								FIRE::ADD_EXPLOSION(Var13 + Var7, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
 								GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_drug_grd_plane_exp", Var13, 0f, 0f, 0f, 3f, false, false, false);
 								GRAPHICS::START_PARTICLE_FX_LOOPED_AT_COORD("scr_ojdg4_train_fire", Var13, 0f, 0f, 0f, 3f, false, false, false, false);
 							}
 							Var16 = { ENTITY::GET_ENTITY_COORDS(VEHICLE::GET_TRAIN_CARRIAGE(uParam3->f_312[iParam5], 4), true) };
-							FIRE::ADD_EXPLOSION(Var16 + Var7, 26, 0.5f, true, false, 1f, false);
+							FIRE::ADD_EXPLOSION(Var16 + Var7, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
 							VEHICLE::SET_TRAIN_CRUISE_SPEED(uParam3->f_312[iParam5], 0f);
 							VEHICLE::EXPLODE_VEHICLE(uParam3->f_312[iParam5], true, false);
 						}
@@ -14916,7 +14916,7 @@ int func_258(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4, in
 								iVar0++;
 							}
 							Var16 = { ENTITY::GET_ENTITY_COORDS(uParam3->f_322[2], true) };
-							FIRE::ADD_EXPLOSION(Var16 + Var7, 26, 0.5f, true, false, 1f, false);
+							FIRE::ADD_EXPLOSION(Var16 + Var7, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
 						}
 					}
 					else
@@ -14938,7 +14938,7 @@ int func_258(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4, in
 								if (ENTITY::DOES_ENTITY_EXIST(Local_4616[iParam5 /*4*/][iVar0]) && !ENTITY::IS_ENTITY_DEAD(Local_4616[iParam5 /*4*/][iVar0], false))
 								{
 									Var19 = { ENTITY::GET_ENTITY_COORDS(Local_4616[iParam5 /*4*/][iVar0], true) };
-									FIRE::ADD_EXPLOSION(Var19 + Var4, 26, 0.5f, true, true, 1f, false);
+									FIRE::ADD_EXPLOSION(Var19 + Var4, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, true, 1f, false);
 									VEHICLE::EXPLODE_VEHICLE(Local_4616[iParam5 /*4*/][iVar0], true, false);
 								}
 								iVar0++;
@@ -14949,7 +14949,7 @@ int func_258(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4, in
 								if (ENTITY::DOES_ENTITY_EXIST(uParam3->f_160[iVar0]))
 								{
 									Var22 = { ENTITY::GET_ENTITY_COORDS(uParam3->f_160[iVar0], true) };
-									FIRE::ADD_EXPLOSION(Var22, 26, 0.5f, true, true, 1f, false);
+									FIRE::ADD_EXPLOSION(Var22, 26 /*EXP_TAG_TRAIN*/, 0.5f, true, true, 1f, false);
 								}
 								iVar0++;
 							}

@@ -6004,7 +6004,7 @@ int func_6()//Position - 0x996
 	{
 		if (MISC::HAS_BULLET_IMPACTED_IN_AREA(ENTITY::GET_ENTITY_COORDS(uLocal_5545.f_9, true), 0.5f, true, true))
 		{
-			FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(uLocal_5545.f_9, true), 26, 0.5f, true, false, 1f, false);
+			FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(uLocal_5545.f_9, true), 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
 			OBJECT::DELETE_OBJECT(&(uLocal_5545.f_9));
 			iLocal_3641 = 15;
 			return 1;
@@ -6014,7 +6014,7 @@ int func_6()//Position - 0x996
 	{
 		if (MISC::HAS_BULLET_IMPACTED_IN_AREA(ENTITY::GET_ENTITY_COORDS(Local_5576.f_5, true), 0.5f, true, true))
 		{
-			FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_5576.f_5, true), 26, 0.5f, true, false, 1f, false);
+			FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_5576.f_5, true), 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
 			OBJECT::DELETE_OBJECT(&(Local_5576.f_5));
 			iLocal_3641 = 15;
 			return 1;
@@ -6073,7 +6073,7 @@ int func_6()//Position - 0x996
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(Local_5697.f_2))
 				{
-					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_5697.f_2, true), 3, 0.5f, true, false, 1f, false);
+					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_5697.f_2, true), 3 /*EXP_TAG_MOLOTOV*/, 0.5f, true, false, 1f, false);
 					iLocal_3641 = 17;
 				}
 			}
@@ -6113,7 +6113,7 @@ int func_6()//Position - 0x996
 		}
 		if (Local_5576.f_22)
 		{
-			FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_5562.f_0, true), 26, 0.5f, true, false, 1f, false);
+			FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(Local_5562.f_0, true), 26 /*EXP_TAG_TRAIN*/, 0.5f, true, false, 1f, false);
 			OBJECT::DELETE_OBJECT(&Local_5562);
 			iLocal_3641 = 17;
 			return 1;

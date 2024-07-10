@@ -115387,7 +115387,7 @@ int func_834()//Position - 0x8A344
 			}
 			if (func_30(Local_317[51 /*25*/]))
 			{
-				if (ENTITY::GET_ENTITY_HEALTH(Local_317[51 /*25*/]) < 1000 || FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(Local_1743[1 /*7*/], true), 2f))
+				if (ENTITY::GET_ENTITY_HEALTH(Local_317[51 /*25*/]) < 1000 || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(Local_1743[1 /*7*/], true), 2f))
 				{
 					iLocal_6698 = PED::CREATE_PED(26, iLocal_63, 0f, 0f, 0f, 0f, true, true);
 					iLocal_6699 = PED::CREATE_PED(26, iLocal_63, 0f, 0f, 0f, 0f, true, true);
@@ -115423,7 +115423,7 @@ int func_834()//Position - 0x8A344
 			break;
 		
 		case 2:
-			if (MISC::HAS_BULLET_IMPACTED_IN_AREA(ENTITY::GET_ENTITY_COORDS(func_28(), true), 2f, false, true) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(func_28(), true), 2f))
+			if (MISC::HAS_BULLET_IMPACTED_IN_AREA(ENTITY::GET_ENTITY_COORDS(func_28(), true), 2f, false, true) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(func_28(), true), 2f))
 			{
 				ENTITY::SET_ENTITY_HEALTH(func_28(), 0, 0, 0);
 			}
@@ -115527,11 +115527,11 @@ int func_834()//Position - 0x8A344
 					if (func_30(Local_1743[1 /*7*/]))
 					{
 						AUDIO::TRIGGER_MUSIC_EVENT("MIC3_CRASH");
-						FIRE::ADD_EXPLOSION(-2236.32f, 251.21913f, 183.62654f, 32, 1.5f, true, false, 1f, false);
-						FIRE::ADD_EXPLOSION(-2238.8386f, 252.75941f, 183.562f, 32, 1.5f, true, false, 1f, false);
-						FIRE::ADD_EXPLOSION(-2233.902f, 250.44415f, 182.37263f, 32, 1.5f, true, false, 1f, false);
-						FIRE::ADD_EXPLOSION(-2239.599f, 250.79906f, 185.3237f, 32, 1.5f, true, false, 1f, false);
-						FIRE::ADD_EXPLOSION(-2236.5828f, 251.35506f, 185f, 32, 1.5f, true, false, 1f, false);
+						FIRE::ADD_EXPLOSION(-2236.32f, 251.21913f, 183.62654f, 32 /*EXP_TAG_PLANE_ROCKET*/, 1.5f, true, false, 1f, false);
+						FIRE::ADD_EXPLOSION(-2238.8386f, 252.75941f, 183.562f, 32 /*EXP_TAG_PLANE_ROCKET*/, 1.5f, true, false, 1f, false);
+						FIRE::ADD_EXPLOSION(-2233.902f, 250.44415f, 182.37263f, 32 /*EXP_TAG_PLANE_ROCKET*/, 1.5f, true, false, 1f, false);
+						FIRE::ADD_EXPLOSION(-2239.599f, 250.79906f, 185.3237f, 32 /*EXP_TAG_PLANE_ROCKET*/, 1.5f, true, false, 1f, false);
+						FIRE::ADD_EXPLOSION(-2236.5828f, 251.35506f, 185f, 32 /*EXP_TAG_PLANE_ROCKET*/, 1.5f, true, false, 1f, false);
 						PED::DELETE_PED(&iLocal_6698);
 						PED::DELETE_PED(&iLocal_6699);
 						PED::DELETE_PED(&(Local_317[51 /*25*/]));
@@ -117004,7 +117004,7 @@ void func_876()//Position - 0x8D412
 			{
 				VEHICLE::EXPLODE_VEHICLE(Local_1743[14 /*7*/], true, true);
 				CAM::SHAKE_GAMEPLAY_CAM("SMALL_EXPLOSION_SHAKE", 0.1f);
-				FIRE::ADD_EXPLOSION(Local_6561, 5, 0.5f, true, false, 1f, false);
+				FIRE::ADD_EXPLOSION(Local_6561, 5 /*EXP_TAG_TANKSHELL*/, 0.5f, true, false, 1f, false);
 				TASK::CLEAR_PED_TASKS(iLocal_4084);
 				PED::REMOVE_PED_DEFENSIVE_AREA(iLocal_4084, false);
 				PED::SET_PED_SPHERE_DEFENSIVE_AREA(iLocal_4084, Local_4113[1 /*4*/], 1f, true, false);
@@ -119070,7 +119070,7 @@ void func_907()//Position - 0x90F19
 		{
 			if (ENTITY::IS_ENTITY_DEAD(iLocal_4084, false) || !ENTITY::IS_ENTITY_DEAD(iLocal_4084, false))
 			{
-				if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(iLocal_4084, true), 6f))
+				if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(iLocal_4084, true), 6f))
 				{
 					if (ENTITY::DOES_ENTITY_EXIST(Local_1863[0 /*2*/]))
 					{

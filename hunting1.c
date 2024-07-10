@@ -41514,7 +41514,7 @@ int func_335(int iParam0)//Position - 0x30589
 		{
 			Var0 = { ENTITY::GET_ENTITY_COORDS(iParam0, true) };
 		}
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, Var0, 20f))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Var0, 20f))
 		{
 			return 0;
 		}
@@ -46304,7 +46304,7 @@ void func_469()//Position - 0x35EDD
 						iLocal_625 = 1;
 					}
 				}
-				if (((ENTITY::IS_ENTITY_DEAD(iLocal_732, false) || ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iLocal_732, PLAYER::PLAYER_PED_ID(), true)) || WEAPON::HAS_PED_BEEN_DAMAGED_BY_WEAPON(iLocal_732, 0, 2)) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(iLocal_732, false), 10f))
+				if (((ENTITY::IS_ENTITY_DEAD(iLocal_732, false) || ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iLocal_732, PLAYER::PLAYER_PED_ID(), true)) || WEAPON::HAS_PED_BEEN_DAMAGED_BY_WEAPON(iLocal_732, 0, 2)) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(iLocal_732, false), 10f))
 				{
 					func_2();
 					iLocal_708 = MISC::GET_GAME_TIMER() + 2400;
@@ -47396,7 +47396,7 @@ void func_504()//Position - 0x38408
 {
 	if (!PED::IS_PED_INJURED(iLocal_732))
 	{
-		if (((MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(iLocal_732, false) + Vector(2f, 2f, 2f), ENTITY::GET_ENTITY_COORDS(iLocal_732, false) - Vector(2f, 2f, 2f), joaat("WEAPON_GRENADE"), false) || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(iLocal_732, false) + Vector(2f, 2f, 2f), ENTITY::GET_ENTITY_COORDS(iLocal_732, false) - Vector(2f, 2f, 2f), joaat("WEAPON_STICKYBOMB"), false)) || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(iLocal_732, false) + Vector(2f, 2f, 2f), ENTITY::GET_ENTITY_COORDS(iLocal_732, false) - Vector(2f, 2f, 2f), joaat("WEAPON_MOLOTOV"), false)) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(iLocal_732, false), 10f))
+		if (((MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(iLocal_732, false) + Vector(2f, 2f, 2f), ENTITY::GET_ENTITY_COORDS(iLocal_732, false) - Vector(2f, 2f, 2f), joaat("WEAPON_GRENADE"), false) || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(iLocal_732, false) + Vector(2f, 2f, 2f), ENTITY::GET_ENTITY_COORDS(iLocal_732, false) - Vector(2f, 2f, 2f), joaat("WEAPON_STICKYBOMB"), false)) || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(iLocal_732, false) + Vector(2f, 2f, 2f), ENTITY::GET_ENTITY_COORDS(iLocal_732, false) - Vector(2f, 2f, 2f), joaat("WEAPON_MOLOTOV"), false)) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(iLocal_732, false), 10f))
 		{
 			PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_606, joaat("PLAYER"));
 		}

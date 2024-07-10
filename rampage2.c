@@ -3318,7 +3318,7 @@ void func_76(int* iParam0)//Position - 0x3FE0
 			break;
 		
 		case 3:
-			if (FIRE::IS_EXPLOSION_IN_SPHERE(5, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 60f) || MISC::GET_GAME_TIMER() >= iParam0->f_5)
+			if (FIRE::IS_EXPLOSION_IN_SPHERE(5 /*EXP_TAG_TANKSHELL*/, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 60f) || MISC::GET_GAME_TIMER() >= iParam0->f_5)
 			{
 				iParam0->f_5 = (MISC::GET_GAME_TIMER() + MISC::GET_RANDOM_INT_IN_RANGE(3000, 4000));
 				iParam0->f_6 = 4;

@@ -557,7 +557,7 @@ int func_3(int* iParam0, int iParam1)//Position - 0x3E7
 			break;
 		
 		case 5:
-			FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(*iParam0, true), 0, 0.5f, true, false, 1f, false);
+			FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(*iParam0, true), 0 /*EXP_TAG_GRENADE*/, 0.5f, true, false, 1f, false);
 			OBJECT::DELETE_OBJECT(iParam0);
 			return 1;
 			break;

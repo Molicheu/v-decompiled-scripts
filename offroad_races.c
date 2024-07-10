@@ -6497,7 +6497,7 @@ void func_125(var uParam0, int iParam1)//Position - 0x6FBD
 {
 	if ((func_126(uParam0, iParam1) && !uParam0->f_396[iParam1 /*203*/].f_193) && (VEHICLE::IS_VEHICLE_STOPPED(uParam0->f_396[iParam1 /*203*/].f_9) || VEHICLE::IS_VEHICLE_ON_ALL_WHEELS(uParam0->f_396[iParam1 /*203*/].f_9)))
 	{
-		FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(uParam0->f_396[iParam1 /*203*/].f_9, true), 7, 1f, true, false, 1f, false);
+		FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(uParam0->f_396[iParam1 /*203*/].f_9, true), 7 /*EXP_TAG_CAR*/, 1f, true, false, 1f, false);
 		uParam0->f_396[iParam1 /*203*/].f_193 = 1;
 	}
 }

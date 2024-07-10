@@ -1487,12 +1487,12 @@ void func_1(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var
 				}
 				WEAPON::CLEAR_PED_LAST_WEAPON_DAMAGE(iLocal_70);
 				func_538(uParam1, 2);
-				if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 50f) && !func_561(uParam1, 1))
+				if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 50f) && !func_561(uParam1, 1))
 				{
 					*uParam1++;
 					func_560(uParam1, 1);
 				}
-				else if (!FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 50f) && func_561(uParam1, 1))
+				else if (!FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 50f) && func_561(uParam1, 1))
 				{
 					if (uParam1->f_9 == 1)
 					{

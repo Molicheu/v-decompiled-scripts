@@ -37144,7 +37144,7 @@ void func_297()//Position - 0x2AA15
 	{
 		if (bLocal_405)
 		{
-			if ((((PED::IS_PED_SHOOTING(PLAYER::PLAYER_PED_ID()) && func_305()) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, Local_482, fLocal_485)) || !func_210(Local_96.f_28[1])) || !func_210(Local_96.f_28[2]))
+			if ((((PED::IS_PED_SHOOTING(PLAYER::PLAYER_PED_ID()) && func_305()) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Local_482, fLocal_485)) || !func_210(Local_96.f_28[1])) || !func_210(Local_96.f_28[2]))
 			{
 				iLocal_459 = 1;
 				iLocal_458 = 3;
@@ -37316,7 +37316,7 @@ void func_297()//Position - 0x2AA15
 		}
 		if (func_210(Local_96.f_28[1]))
 		{
-			if (((((((((func_271(Local_96.f_28[1], 0, 0, 0, 0) && func_305()) || ((ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(Local_96.f_28[1], PLAYER::PLAYER_PED_ID(), true) && func_302(PLAYER::PLAYER_PED_ID()) != joaat("WEAPON_UNARMED")) && func_302(PLAYER::PLAYER_PED_ID()) != joaat("OBJECT"))) || ((func_258(Local_96.f_28[1], 1126825984) && func_302(PLAYER::PLAYER_PED_ID()) != joaat("WEAPON_UNARMED")) && func_302(PLAYER::PLAYER_PED_ID()) != joaat("OBJECT"))) || !func_219(Local_96.f_35[1])) || PED::IS_PED_RAGDOLL(Local_96.f_28[1])) || func_299(Local_96.f_28[1])) || func_281(Local_96.f_28[0])) || func_281(Local_96.f_28[2])) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, Local_482, fLocal_485))
+			if (((((((((func_271(Local_96.f_28[1], 0, 0, 0, 0) && func_305()) || ((ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(Local_96.f_28[1], PLAYER::PLAYER_PED_ID(), true) && func_302(PLAYER::PLAYER_PED_ID()) != joaat("WEAPON_UNARMED")) && func_302(PLAYER::PLAYER_PED_ID()) != joaat("OBJECT"))) || ((func_258(Local_96.f_28[1], 1126825984) && func_302(PLAYER::PLAYER_PED_ID()) != joaat("WEAPON_UNARMED")) && func_302(PLAYER::PLAYER_PED_ID()) != joaat("OBJECT"))) || !func_219(Local_96.f_35[1])) || PED::IS_PED_RAGDOLL(Local_96.f_28[1])) || func_299(Local_96.f_28[1])) || func_281(Local_96.f_28[0])) || func_281(Local_96.f_28[2])) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Local_482, fLocal_485))
 			{
 				if (!PED::IS_PED_FLEEING(Local_96.f_28[1]) && !PED::IS_PED_IN_ANY_VEHICLE(Local_96.f_28[1], false))
 				{
@@ -37338,7 +37338,7 @@ void func_297()//Position - 0x2AA15
 		}
 		if (func_210(Local_96.f_28[2]) && !iLocal_463)
 		{
-			if (((((((((((func_257(Local_96.f_28[2], 1, 1116471296, 1126825984, 0, 0, 0, 0) && func_305()) || (func_257(Local_96.f_28[0], 1, 1116471296, 1126825984, 0, 0, 0, 0) && func_305())) || (func_257(Local_96.f_28[1], 1, 1116471296, 1126825984, 0, 0, 0, 0) && func_305())) || func_299(Local_96.f_28[2])) || func_299(Local_96.f_28[0])) || func_299(Local_96.f_28[1])) || PED::IS_PED_RAGDOLL(Local_96.f_28[2])) || !func_219(Local_96.f_35[1])) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, Local_482, fLocal_485)) || func_281(Local_96.f_28[0])) || func_281(Local_96.f_28[1]))
+			if (((((((((((func_257(Local_96.f_28[2], 1, 1116471296, 1126825984, 0, 0, 0, 0) && func_305()) || (func_257(Local_96.f_28[0], 1, 1116471296, 1126825984, 0, 0, 0, 0) && func_305())) || (func_257(Local_96.f_28[1], 1, 1116471296, 1126825984, 0, 0, 0, 0) && func_305())) || func_299(Local_96.f_28[2])) || func_299(Local_96.f_28[0])) || func_299(Local_96.f_28[1])) || PED::IS_PED_RAGDOLL(Local_96.f_28[2])) || !func_219(Local_96.f_35[1])) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Local_482, fLocal_485)) || func_281(Local_96.f_28[0])) || func_281(Local_96.f_28[1]))
 			{
 				if (!PED::IS_PED_FLEEING(Local_96.f_28[2]) && !PED::IS_PED_IN_ANY_VEHICLE(Local_96.f_28[2], false))
 				{

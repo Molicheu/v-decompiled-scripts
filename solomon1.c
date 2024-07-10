@@ -49460,7 +49460,7 @@ void func_451()//Position - 0x3A494
 	
 	if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(func_8(), 908.51294f, -1699.9968f, 65f, 910.62f, -1663.5387f, 50f, 18f, false, true, 0))
 	{
-		if ((PED::HAS_PED_RECEIVED_EVENT(func_383(), 23) || FIRE::IS_EXPLOSION_IN_SPHERE(-1, 910.3092f, -1681.3794f, 50.14197f, 30f)) || MISC::IS_PROJECTILE_TYPE_IN_ANGLED_AREA(910.593f, -1671.7144f, 49.13342f, 909.09564f, -1689.481f, 54.12972f, 12f, joaat("WEAPON_STICKYBOMB"), false))
+		if ((PED::HAS_PED_RECEIVED_EVENT(func_383(), 23) || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, 910.3092f, -1681.3794f, 50.14197f, 30f)) || MISC::IS_PROJECTILE_TYPE_IN_ANGLED_AREA(910.593f, -1671.7144f, 49.13342f, 909.09564f, -1689.481f, 54.12972f, 12f, joaat("WEAPON_STICKYBOMB"), false))
 		{
 			if (func_14(func_237()) && func_14(func_238()))
 			{
@@ -49535,7 +49535,7 @@ void func_451()//Position - 0x3A494
 			}
 		}
 	}
-	else if (PED::HAS_PED_RECEIVED_EVENT(func_383(), 23) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, 919.02515f, -1736.7335f, 28f, 925.47205f, -1649.4197f, 65f, 120f))
+	else if (PED::HAS_PED_RECEIVED_EVENT(func_383(), 23) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, 919.02515f, -1736.7335f, 28f, 925.47205f, -1649.4197f, 65f, 120f))
 	{
 		func_140();
 	}
@@ -49666,7 +49666,7 @@ void func_452()//Position - 0x3A8AD
 							iLocal_1169 = 2;
 						}
 					}
-					else if ((PED::HAS_PED_RECEIVED_EVENT(Local_152[iVar0 /*32*/], 23) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1, 919.02515f, -1736.7335f, 28f, 925.47205f, -1649.4197f, 65f, 120f)) || Local_152[iVar0 /*32*/].f_25 == 4)
+					else if ((PED::HAS_PED_RECEIVED_EVENT(Local_152[iVar0 /*32*/], 23) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(-1 /*EXP_TAG_DONTCARE*/, 919.02515f, -1736.7335f, 28f, 925.47205f, -1649.4197f, 65f, 120f)) || Local_152[iVar0 /*32*/].f_25 == 4)
 					{
 						if (PED::GET_CLOSEST_PED(ENTITY::GET_ENTITY_COORDS(func_8(), true), 80f, false, true, &(Local_152[iVar0 /*32*/]), false, true, -1))
 						{

@@ -137273,7 +137273,7 @@ void func_1307()//Position - 0x9719C
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(Local_6741[iVar0 /*23*/].f_11))
 			{
-				if (ENTITY::GET_ENTITY_HEALTH(Local_6741[iVar0 /*23*/].f_11) < 10000 || FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(Local_6741[iVar0 /*23*/].f_11, true), 4f))
+				if (ENTITY::GET_ENTITY_HEALTH(Local_6741[iVar0 /*23*/].f_11) < 10000 || FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, ENTITY::GET_ENTITY_COORDS(Local_6741[iVar0 /*23*/].f_11, true), 4f))
 				{
 					Local_6741[iVar0 /*23*/] = 5;
 					Local_6741[iVar0 /*23*/].f_15 = 0f;

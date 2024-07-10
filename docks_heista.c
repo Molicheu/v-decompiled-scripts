@@ -123400,7 +123400,7 @@ void func_870()//Position - 0x95BEE
 	}
 	if (iLocal_1891 > 1 && iLocal_1891 < 8)
 	{
-		if ((FIRE::IS_EXPLOSION_IN_ANGLED_AREA(2, Local_1451[0 /*7*/].f_2 + Vector(2f, 3f, -0.75f), Local_1451[0 /*7*/].f_2 + Vector(-2f, 3f, -0.75f), 10f) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(2, Local_1451[1 /*7*/].f_2 + Vector(2f, 3f, -0.75f), Local_1451[1 /*7*/].f_2 + Vector(-2f, 3f, -0.75f), 10f)) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(2, Local_1451[2 /*7*/].f_2 + Vector(2f, 3f, -0.75f), Local_1451[2 /*7*/].f_2 + Vector(-2f, 3f, -0.75f), 10f))
+		if ((FIRE::IS_EXPLOSION_IN_ANGLED_AREA(2 /*EXP_TAG_STICKYBOMB*/, Local_1451[0 /*7*/].f_2 + Vector(2f, 3f, -0.75f), Local_1451[0 /*7*/].f_2 + Vector(-2f, 3f, -0.75f), 10f) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(2 /*EXP_TAG_STICKYBOMB*/, Local_1451[1 /*7*/].f_2 + Vector(2f, 3f, -0.75f), Local_1451[1 /*7*/].f_2 + Vector(-2f, 3f, -0.75f), 10f)) || FIRE::IS_EXPLOSION_IN_ANGLED_AREA(2 /*EXP_TAG_STICKYBOMB*/, Local_1451[2 /*7*/].f_2 + Vector(2f, 3f, -0.75f), Local_1451[2 /*7*/].f_2 + Vector(-2f, 3f, -0.75f), 10f))
 		{
 			func_317(20);
 		}

@@ -4982,12 +4982,12 @@ int func_103(int iParam0)//Position - 0x412B
 		}
 		if (iLocal_1033 < 11)
 		{
-			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, Local_1310, fLocal_1313))
+			if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Local_1310, fLocal_1313))
 			{
 				return 1;
 			}
 		}
-		else if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, Local_1310, fLocal_1313))
+		else if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, Local_1310, fLocal_1313))
 		{
 			if (func_104())
 			{
@@ -21176,7 +21176,7 @@ int func_470()//Position - 0x1AA83
 	{
 		return 1;
 	}
-	if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, -1231.326f, -201.7195f, 38.2114f, 20f))
+	if (FIRE::IS_EXPLOSION_IN_SPHERE(-1 /*EXP_TAG_DONTCARE*/, -1231.326f, -201.7195f, 38.2114f, 20f))
 	{
 		return 1;
 	}
